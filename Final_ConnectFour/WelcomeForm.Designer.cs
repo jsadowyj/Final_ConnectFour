@@ -1,7 +1,7 @@
 ﻿
 namespace Final_ConnectFour
 {
-    partial class Form2
+    partial class WelcomeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -125,7 +125,7 @@ namespace Final_ConnectFour
             this.losses_count.TabIndex = 7;
             this.losses_count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form2
+            // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,9 +139,9 @@ namespace Final_ConnectFour
             this.Controls.Add(this.lbl_1);
             this.Controls.Add(this.btn_2player);
             this.Controls.Add(this.btn_1player);
-            this.Name = "Form2";
+            this.Name = "WelcomeForm";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
