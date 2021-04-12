@@ -58,14 +58,14 @@ namespace Final_ConnectFour
             this.btn_2player.Name = "btn_2player";
             this.btn_2player.Size = new System.Drawing.Size(237, 148);
             this.btn_2player.TabIndex = 1;
-            this.btn_2player.Text = "2 player";
+            this.btn_2player.Text = "2 Player";
             this.btn_2player.UseVisualStyleBackColor = false;
             // 
             // lbl_1
             // 
             this.lbl_1.AutoSize = true;
             this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1.Location = new System.Drawing.Point(287, 9);
+            this.lbl_1.Location = new System.Drawing.Point(264, 9);
             this.lbl_1.Name = "lbl_1";
             this.lbl_1.Size = new System.Drawing.Size(275, 46);
             this.lbl_1.TabIndex = 2;
