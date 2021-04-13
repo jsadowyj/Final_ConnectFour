@@ -141,6 +141,7 @@ namespace Final_ConnectFour
             this.Controls.Add(this.btn_2player);
             this.Controls.Add(this.btn_1player);
             this.Name = "WelcomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
