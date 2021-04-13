@@ -16,5 +16,10 @@ namespace Final_ConnectFour
         {
             InitializeComponent();
         }
+
+        private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -21,5 +21,14 @@ namespace Final_ConnectFour
         {
 
         }
+
+        private void btn_2player_Click(object sender, EventArgs e)
+        {
+            GameForm gameForm = new GameForm();
+            gameForm.StartPosition = FormStartPosition.Manual;
+            gameForm.Location = this.Location;
+            gameForm.Show();
+            this.Hide();
+        }
     }
 }
