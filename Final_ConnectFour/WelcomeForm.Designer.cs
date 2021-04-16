@@ -98,13 +98,13 @@ namespace Final_ConnectFour
             this.btn_exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
             this.btn_exit.FlatAppearance.BorderSize = 3;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_exit.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Font = new System.Drawing.Font("Calibri", 13.8F);
             this.btn_exit.Location = new System.Drawing.Point(567, 511);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(481, 41);
             this.btn_exit.TabIndex = 3;
-            this.btn_exit.Text = "EXIT";
+            this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = false;
             // 
             // dsn_lbl_1
