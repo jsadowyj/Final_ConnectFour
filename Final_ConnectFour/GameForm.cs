@@ -87,6 +87,7 @@ namespace Final_ConnectFour
         {
             RoundButton roundButton = sender as RoundButton;
 
+            roundButton.PlaceRed();
             MessageBox.Show(roundButton.Name);
         }
 
