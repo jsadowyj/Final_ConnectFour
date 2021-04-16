@@ -16,6 +16,21 @@ namespace Final_ConnectFour
             this.Region = new System.Drawing.Region(grPath);
             base.OnPaint(e);
         }
+
+        public void ResetButton()
+        {
+            this.BackgroundImage = null;
+        }
+
+        public void SetRed()
+        {
+            this.BackgroundImage = Properties.Resources.red_piece;
+        }
+
+        public void SetYellow()
+        {
+            this.BackgroundImage = Properties.Resources.yellow_piece;
+        }
     }
 
 }

@@ -21,5 +21,20 @@ namespace Final_ConnectFour
         {
             Application.Exit();
         }
+
+        private void debug_red_Click(object sender, EventArgs e)
+        {
+            roundBtn_0_0.SetRed();
+        }
+
+        private void debug_yellow_Click(object sender, EventArgs e)
+        {
+            roundBtn_0_0.SetYellow();
+        }
+
+        private void debug_reset_Click(object sender, EventArgs e)
+        {
+            roundBtn_0_0.ResetButton();
+        }
     }
 }
