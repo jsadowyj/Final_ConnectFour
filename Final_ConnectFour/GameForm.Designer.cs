@@ -132,6 +132,7 @@ namespace Final_ConnectFour
             this.roundBtn_5_6.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_5_6.TabIndex = 42;
             this.roundBtn_5_6.UseVisualStyleBackColor = false;
+            this.roundBtn_5_6.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_5_5
             // 
@@ -144,6 +145,7 @@ namespace Final_ConnectFour
             this.roundBtn_5_5.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_5_5.TabIndex = 41;
             this.roundBtn_5_5.UseVisualStyleBackColor = false;
+            this.roundBtn_5_5.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_5_4
             // 
@@ -156,6 +158,7 @@ namespace Final_ConnectFour
             this.roundBtn_5_4.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_5_4.TabIndex = 40;
             this.roundBtn_5_4.UseVisualStyleBackColor = false;
+            this.roundBtn_5_4.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_5_3
             // 
@@ -168,6 +171,7 @@ namespace Final_ConnectFour
             this.roundBtn_5_3.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_5_3.TabIndex = 39;
             this.roundBtn_5_3.UseVisualStyleBackColor = false;
+            this.roundBtn_5_3.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_5_2
             // 
@@ -180,6 +184,7 @@ namespace Final_ConnectFour
             this.roundBtn_5_2.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_5_2.TabIndex = 38;
             this.roundBtn_5_2.UseVisualStyleBackColor = false;
+            this.roundBtn_5_2.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_5_1
             // 
@@ -192,6 +197,7 @@ namespace Final_ConnectFour
             this.roundBtn_5_1.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_5_1.TabIndex = 37;
             this.roundBtn_5_1.UseVisualStyleBackColor = false;
+            this.roundBtn_5_1.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_5_0
             // 
@@ -204,6 +210,7 @@ namespace Final_ConnectFour
             this.roundBtn_5_0.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_5_0.TabIndex = 36;
             this.roundBtn_5_0.UseVisualStyleBackColor = false;
+            this.roundBtn_5_0.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_4_6
             // 
@@ -216,6 +223,7 @@ namespace Final_ConnectFour
             this.roundBtn_4_6.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_4_6.TabIndex = 35;
             this.roundBtn_4_6.UseVisualStyleBackColor = false;
+            this.roundBtn_4_6.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_4_5
             // 
@@ -228,6 +236,7 @@ namespace Final_ConnectFour
             this.roundBtn_4_5.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_4_5.TabIndex = 34;
             this.roundBtn_4_5.UseVisualStyleBackColor = false;
+            this.roundBtn_4_5.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_4_4
             // 
@@ -240,6 +249,7 @@ namespace Final_ConnectFour
             this.roundBtn_4_4.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_4_4.TabIndex = 33;
             this.roundBtn_4_4.UseVisualStyleBackColor = false;
+            this.roundBtn_4_4.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_4_3
             // 
@@ -252,6 +262,7 @@ namespace Final_ConnectFour
             this.roundBtn_4_3.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_4_3.TabIndex = 32;
             this.roundBtn_4_3.UseVisualStyleBackColor = false;
+            this.roundBtn_4_3.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_4_2
             // 
@@ -264,6 +275,7 @@ namespace Final_ConnectFour
             this.roundBtn_4_2.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_4_2.TabIndex = 31;
             this.roundBtn_4_2.UseVisualStyleBackColor = false;
+            this.roundBtn_4_2.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_4_1
             // 
@@ -276,6 +288,7 @@ namespace Final_ConnectFour
             this.roundBtn_4_1.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_4_1.TabIndex = 30;
             this.roundBtn_4_1.UseVisualStyleBackColor = false;
+            this.roundBtn_4_1.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_4_0
             // 
@@ -288,6 +301,7 @@ namespace Final_ConnectFour
             this.roundBtn_4_0.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_4_0.TabIndex = 29;
             this.roundBtn_4_0.UseVisualStyleBackColor = false;
+            this.roundBtn_4_0.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_3_6
             // 
@@ -300,6 +314,7 @@ namespace Final_ConnectFour
             this.roundBtn_3_6.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_3_6.TabIndex = 28;
             this.roundBtn_3_6.UseVisualStyleBackColor = false;
+            this.roundBtn_3_6.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_3_5
             // 
@@ -312,6 +327,7 @@ namespace Final_ConnectFour
             this.roundBtn_3_5.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_3_5.TabIndex = 27;
             this.roundBtn_3_5.UseVisualStyleBackColor = false;
+            this.roundBtn_3_5.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_3_4
             // 
@@ -324,6 +340,7 @@ namespace Final_ConnectFour
             this.roundBtn_3_4.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_3_4.TabIndex = 26;
             this.roundBtn_3_4.UseVisualStyleBackColor = false;
+            this.roundBtn_3_4.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_3_3
             // 
@@ -336,6 +353,7 @@ namespace Final_ConnectFour
             this.roundBtn_3_3.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_3_3.TabIndex = 25;
             this.roundBtn_3_3.UseVisualStyleBackColor = false;
+            this.roundBtn_3_3.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_3_2
             // 
@@ -348,6 +366,7 @@ namespace Final_ConnectFour
             this.roundBtn_3_2.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_3_2.TabIndex = 24;
             this.roundBtn_3_2.UseVisualStyleBackColor = false;
+            this.roundBtn_3_2.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_3_1
             // 
@@ -360,6 +379,7 @@ namespace Final_ConnectFour
             this.roundBtn_3_1.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_3_1.TabIndex = 23;
             this.roundBtn_3_1.UseVisualStyleBackColor = false;
+            this.roundBtn_3_1.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_3_0
             // 
@@ -372,6 +392,7 @@ namespace Final_ConnectFour
             this.roundBtn_3_0.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_3_0.TabIndex = 22;
             this.roundBtn_3_0.UseVisualStyleBackColor = false;
+            this.roundBtn_3_0.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_2_6
             // 
@@ -384,6 +405,7 @@ namespace Final_ConnectFour
             this.roundBtn_2_6.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_2_6.TabIndex = 21;
             this.roundBtn_2_6.UseVisualStyleBackColor = false;
+            this.roundBtn_2_6.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_2_5
             // 
@@ -396,6 +418,7 @@ namespace Final_ConnectFour
             this.roundBtn_2_5.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_2_5.TabIndex = 20;
             this.roundBtn_2_5.UseVisualStyleBackColor = false;
+            this.roundBtn_2_5.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_2_4
             // 
@@ -408,6 +431,7 @@ namespace Final_ConnectFour
             this.roundBtn_2_4.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_2_4.TabIndex = 19;
             this.roundBtn_2_4.UseVisualStyleBackColor = false;
+            this.roundBtn_2_4.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_2_3
             // 
@@ -420,6 +444,7 @@ namespace Final_ConnectFour
             this.roundBtn_2_3.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_2_3.TabIndex = 18;
             this.roundBtn_2_3.UseVisualStyleBackColor = false;
+            this.roundBtn_2_3.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_2_2
             // 
@@ -432,6 +457,7 @@ namespace Final_ConnectFour
             this.roundBtn_2_2.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_2_2.TabIndex = 17;
             this.roundBtn_2_2.UseVisualStyleBackColor = false;
+            this.roundBtn_2_2.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_2_1
             // 
@@ -444,6 +470,7 @@ namespace Final_ConnectFour
             this.roundBtn_2_1.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_2_1.TabIndex = 16;
             this.roundBtn_2_1.UseVisualStyleBackColor = false;
+            this.roundBtn_2_1.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_2_0
             // 
@@ -456,6 +483,7 @@ namespace Final_ConnectFour
             this.roundBtn_2_0.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_2_0.TabIndex = 15;
             this.roundBtn_2_0.UseVisualStyleBackColor = false;
+            this.roundBtn_2_0.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_1_6
             // 
@@ -468,6 +496,7 @@ namespace Final_ConnectFour
             this.roundBtn_1_6.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_1_6.TabIndex = 14;
             this.roundBtn_1_6.UseVisualStyleBackColor = false;
+            this.roundBtn_1_6.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_1_5
             // 
@@ -480,6 +509,7 @@ namespace Final_ConnectFour
             this.roundBtn_1_5.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_1_5.TabIndex = 13;
             this.roundBtn_1_5.UseVisualStyleBackColor = false;
+            this.roundBtn_1_5.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_1_4
             // 
@@ -492,6 +522,7 @@ namespace Final_ConnectFour
             this.roundBtn_1_4.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_1_4.TabIndex = 12;
             this.roundBtn_1_4.UseVisualStyleBackColor = false;
+            this.roundBtn_1_4.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_1_3
             // 
@@ -504,6 +535,7 @@ namespace Final_ConnectFour
             this.roundBtn_1_3.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_1_3.TabIndex = 11;
             this.roundBtn_1_3.UseVisualStyleBackColor = false;
+            this.roundBtn_1_3.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_1_2
             // 
@@ -516,6 +548,7 @@ namespace Final_ConnectFour
             this.roundBtn_1_2.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_1_2.TabIndex = 10;
             this.roundBtn_1_2.UseVisualStyleBackColor = false;
+            this.roundBtn_1_2.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_1_1
             // 
@@ -528,6 +561,7 @@ namespace Final_ConnectFour
             this.roundBtn_1_1.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_1_1.TabIndex = 9;
             this.roundBtn_1_1.UseVisualStyleBackColor = false;
+            this.roundBtn_1_1.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_1_0
             // 
@@ -540,6 +574,7 @@ namespace Final_ConnectFour
             this.roundBtn_1_0.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_1_0.TabIndex = 8;
             this.roundBtn_1_0.UseVisualStyleBackColor = false;
+            this.roundBtn_1_0.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_0_6
             // 
@@ -552,6 +587,7 @@ namespace Final_ConnectFour
             this.roundBtn_0_6.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_0_6.TabIndex = 7;
             this.roundBtn_0_6.UseVisualStyleBackColor = false;
+            this.roundBtn_0_6.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_0_5
             // 
@@ -564,6 +600,7 @@ namespace Final_ConnectFour
             this.roundBtn_0_5.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_0_5.TabIndex = 6;
             this.roundBtn_0_5.UseVisualStyleBackColor = false;
+            this.roundBtn_0_5.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_0_4
             // 
@@ -576,6 +613,7 @@ namespace Final_ConnectFour
             this.roundBtn_0_4.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_0_4.TabIndex = 5;
             this.roundBtn_0_4.UseVisualStyleBackColor = false;
+            this.roundBtn_0_4.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_0_3
             // 
@@ -588,6 +626,7 @@ namespace Final_ConnectFour
             this.roundBtn_0_3.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_0_3.TabIndex = 4;
             this.roundBtn_0_3.UseVisualStyleBackColor = false;
+            this.roundBtn_0_3.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_0_2
             // 
@@ -600,6 +639,7 @@ namespace Final_ConnectFour
             this.roundBtn_0_2.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_0_2.TabIndex = 3;
             this.roundBtn_0_2.UseVisualStyleBackColor = false;
+            this.roundBtn_0_2.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_0_1
             // 
@@ -612,6 +652,7 @@ namespace Final_ConnectFour
             this.roundBtn_0_1.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_0_1.TabIndex = 2;
             this.roundBtn_0_1.UseVisualStyleBackColor = false;
+            this.roundBtn_0_1.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // roundBtn_0_0
             // 
@@ -624,6 +665,7 @@ namespace Final_ConnectFour
             this.roundBtn_0_0.Size = new System.Drawing.Size(70, 76);
             this.roundBtn_0_0.TabIndex = 1;
             this.roundBtn_0_0.UseVisualStyleBackColor = false;
+            this.roundBtn_0_0.Click += new System.EventHandler(this.roundButton_Click);
             // 
             // GameForm
             // 
@@ -683,6 +725,7 @@ namespace Final_ConnectFour
             this.Name = "GameForm";
             this.Text = "Connect Four";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameForm_FormClosing);
+            this.Load += new System.EventHandler(this.GameForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

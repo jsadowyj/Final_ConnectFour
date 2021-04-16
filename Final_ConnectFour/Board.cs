@@ -18,7 +18,10 @@ namespace Final_ConnectFour
         //   {(4,0), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6)}, --> Index 4
         //   {(5,0), (5,1), (5,2), (5,3), (5,4), (5,5), (5,6)}, --> Index 5
         // }
-        public Cell[,] board { get; set; } = new Cell[rows, columns];
+        private Cell[,] board { get; set; } = new Cell[rows, columns];
+
+        // Constructor
+
         public Cell GetCell(int x, int y)
         {
             return this.board[x, y];

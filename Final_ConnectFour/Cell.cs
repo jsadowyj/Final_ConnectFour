@@ -10,11 +10,18 @@ namespace Final_ConnectFour
     {
         public int X { get; set; }
         public int Y { get; set; }
+        public RoundButton Button { get; set; }
 
-        Cell(int x, int y)
+        public Cell(int x, int y)
         {
             this.X = x;
             this.Y = y;
+        }
+        public Cell(int x, int y, RoundButton button)
+        {
+            this.X = x;
+            this.Y = y;
+            this.Button = button;
         }
 
     }
