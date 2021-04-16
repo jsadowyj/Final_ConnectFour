@@ -87,8 +87,7 @@ namespace Final_ConnectFour
         {
             RoundButton roundButton = sender as RoundButton;
 
-            Console.WriteLine(roundButton.Name);
-            roundButton.ChangeHoverColor("Yellow");
+            MessageBox.Show(roundButton.Name);
         }
 
         private void debug_red_Click(object sender, EventArgs e)
