@@ -31,115 +31,212 @@ namespace Final_ConnectFour
         {
             this.btn_1player = new System.Windows.Forms.Button();
             this.btn_2player = new System.Windows.Forms.Button();
-            this.lbl_1 = new System.Windows.Forms.Label();
+            this.dsn_lbl_0 = new System.Windows.Forms.Label();
             this.btn_exit = new System.Windows.Forms.Button();
-            this.lbl_wins = new System.Windows.Forms.Label();
-            this.lbl_losses = new System.Windows.Forms.Label();
-            this.wins_count = new System.Windows.Forms.TextBox();
-            this.losses_count = new System.Windows.Forms.TextBox();
+            this.dsn_lbl_1 = new System.Windows.Forms.Label();
+            this.dsn_lbl_2 = new System.Windows.Forms.Label();
+            this.dsn_lbl_3 = new System.Windows.Forms.Label();
+            this.dsn_lbl_4 = new System.Windows.Forms.Label();
+            this.dsn_lbl_5 = new System.Windows.Forms.Label();
+            this.dsn_lbl_6 = new System.Windows.Forms.Label();
+            this.btn_viewStats = new System.Windows.Forms.Button();
+            this.dsn_lbl_8 = new System.Windows.Forms.Label();
+            this.dsn_lbl_7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_1player
             // 
-            this.btn_1player.BackColor = System.Drawing.Color.Turquoise;
-            this.btn_1player.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_1player.Location = new System.Drawing.Point(113, 262);
+            this.btn_1player.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(215)))), ((int)(((byte)(166)))));
+            this.btn_1player.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_1player.FlatAppearance.BorderSize = 3;
+            this.btn_1player.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_1player.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_1player.Location = new System.Drawing.Point(583, 344);
+            this.btn_1player.Margin = new System.Windows.Forms.Padding(4);
             this.btn_1player.Name = "btn_1player";
-            this.btn_1player.Size = new System.Drawing.Size(237, 148);
+            this.btn_1player.Size = new System.Drawing.Size(216, 41);
             this.btn_1player.TabIndex = 0;
             this.btn_1player.Text = "1 Player";
             this.btn_1player.UseVisualStyleBackColor = false;
             // 
             // btn_2player
             // 
-            this.btn_2player.BackColor = System.Drawing.Color.Turquoise;
-            this.btn_2player.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_2player.Location = new System.Drawing.Point(462, 262);
+            this.btn_2player.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(215)))), ((int)(((byte)(166)))));
+            this.btn_2player.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_2player.FlatAppearance.BorderSize = 3;
+            this.btn_2player.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_2player.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_2player.Location = new System.Drawing.Point(816, 344);
+            this.btn_2player.Margin = new System.Windows.Forms.Padding(4);
             this.btn_2player.Name = "btn_2player";
-            this.btn_2player.Size = new System.Drawing.Size(237, 148);
+            this.btn_2player.Size = new System.Drawing.Size(218, 41);
             this.btn_2player.TabIndex = 1;
             this.btn_2player.Text = "2 Player";
             this.btn_2player.UseVisualStyleBackColor = false;
             this.btn_2player.Click += new System.EventHandler(this.btn_2player_Click);
             // 
-            // lbl_1
+            // dsn_lbl_0
             // 
-            this.lbl_1.AutoSize = true;
-            this.lbl_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_1.Location = new System.Drawing.Point(264, 9);
-            this.lbl_1.Name = "lbl_1";
-            this.lbl_1.Size = new System.Drawing.Size(275, 46);
-            this.lbl_1.TabIndex = 2;
-            this.lbl_1.Text = "Connect Four";
-            this.lbl_1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.dsn_lbl_0.AutoSize = true;
+            this.dsn_lbl_0.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.dsn_lbl_0.Font = new System.Drawing.Font("Candara", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsn_lbl_0.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dsn_lbl_0.Location = new System.Drawing.Point(13, 9);
+            this.dsn_lbl_0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dsn_lbl_0.Name = "dsn_lbl_0";
+            this.dsn_lbl_0.Size = new System.Drawing.Size(311, 61);
+            this.dsn_lbl_0.TabIndex = 2;
+            this.dsn_lbl_0.Text = "Connect Four";
+            this.dsn_lbl_0.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btn_exit
             // 
-            this.btn_exit.BackColor = System.Drawing.Color.Red;
-            this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.Location = new System.Drawing.Point(356, 408);
+            this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(215)))), ((int)(((byte)(166)))));
+            this.btn_exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.btn_exit.FlatAppearance.BorderSize = 3;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_exit.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.Location = new System.Drawing.Point(567, 511);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(100, 51);
+            this.btn_exit.Size = new System.Drawing.Size(481, 41);
             this.btn_exit.TabIndex = 3;
             this.btn_exit.Text = "EXIT";
             this.btn_exit.UseVisualStyleBackColor = false;
             // 
-            // lbl_wins
+            // dsn_lbl_1
             // 
-            this.lbl_wins.AutoSize = true;
-            this.lbl_wins.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_wins.Location = new System.Drawing.Point(199, 85);
-            this.lbl_wins.Name = "lbl_wins";
-            this.lbl_wins.Size = new System.Drawing.Size(89, 31);
-            this.lbl_wins.TabIndex = 4;
-            this.lbl_wins.Text = "WINS";
+            this.dsn_lbl_1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.dsn_lbl_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dsn_lbl_1.Location = new System.Drawing.Point(1, 0);
+            this.dsn_lbl_1.Name = "dsn_lbl_1";
+            this.dsn_lbl_1.Size = new System.Drawing.Size(1068, 78);
+            this.dsn_lbl_1.TabIndex = 4;
             // 
-            // lbl_losses
+            // dsn_lbl_2
             // 
-            this.lbl_losses.AutoSize = true;
-            this.lbl_losses.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_losses.Location = new System.Drawing.Point(517, 85);
-            this.lbl_losses.Name = "lbl_losses";
-            this.lbl_losses.Size = new System.Drawing.Size(128, 31);
-            this.lbl_losses.TabIndex = 5;
-            this.lbl_losses.Text = "LOSSES";
+            this.dsn_lbl_2.AutoSize = true;
+            this.dsn_lbl_2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.dsn_lbl_2.Font = new System.Drawing.Font("Candara", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsn_lbl_2.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dsn_lbl_2.Location = new System.Drawing.Point(765, 9);
+            this.dsn_lbl_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dsn_lbl_2.Name = "dsn_lbl_2";
+            this.dsn_lbl_2.Size = new System.Drawing.Size(280, 61);
+            this.dsn_lbl_2.TabIndex = 5;
+            this.dsn_lbl_2.Text = "CIS 153 Final";
+            this.dsn_lbl_2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // wins_count
+            // dsn_lbl_3
             // 
-            this.wins_count.BackColor = System.Drawing.Color.DodgerBlue;
-            this.wins_count.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.wins_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wins_count.Location = new System.Drawing.Point(188, 145);
-            this.wins_count.Name = "wins_count";
-            this.wins_count.Size = new System.Drawing.Size(100, 31);
-            this.wins_count.TabIndex = 6;
-            this.wins_count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dsn_lbl_3.AutoSize = true;
+            this.dsn_lbl_3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dsn_lbl_3.Font = new System.Drawing.Font("Candara", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsn_lbl_3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dsn_lbl_3.Location = new System.Drawing.Point(13, 101);
+            this.dsn_lbl_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dsn_lbl_3.Name = "dsn_lbl_3";
+            this.dsn_lbl_3.Size = new System.Drawing.Size(564, 59);
+            this.dsn_lbl_3.TabIndex = 6;
+            this.dsn_lbl_3.Text = "Welcome to Connect Four!";
+            this.dsn_lbl_3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // losses_count
+            // dsn_lbl_4
             // 
-            this.losses_count.BackColor = System.Drawing.Color.DodgerBlue;
-            this.losses_count.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.losses_count.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.losses_count.Location = new System.Drawing.Point(523, 145);
-            this.losses_count.Name = "losses_count";
-            this.losses_count.Size = new System.Drawing.Size(100, 31);
-            this.losses_count.TabIndex = 7;
-            this.losses_count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dsn_lbl_4.AutoSize = true;
+            this.dsn_lbl_4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dsn_lbl_4.Font = new System.Drawing.Font("Candara Light", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsn_lbl_4.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dsn_lbl_4.Location = new System.Drawing.Point(20, 160);
+            this.dsn_lbl_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dsn_lbl_4.Name = "dsn_lbl_4";
+            this.dsn_lbl_4.Size = new System.Drawing.Size(540, 21);
+            this.dsn_lbl_4.TabIndex = 7;
+            this.dsn_lbl_4.Text = "Created by: Kyle Bartram, David Concord,  Brendan Lynch, and Jacob Sadowyj";
+            this.dsn_lbl_4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dsn_lbl_5
+            // 
+            this.dsn_lbl_5.AutoSize = true;
+            this.dsn_lbl_5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dsn_lbl_5.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsn_lbl_5.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dsn_lbl_5.Location = new System.Drawing.Point(312, 341);
+            this.dsn_lbl_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dsn_lbl_5.Name = "dsn_lbl_5";
+            this.dsn_lbl_5.Size = new System.Drawing.Size(248, 49);
+            this.dsn_lbl_5.TabIndex = 8;
+            this.dsn_lbl_5.Text = "Start a game:";
+            this.dsn_lbl_5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // dsn_lbl_6
+            // 
+            this.dsn_lbl_6.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.dsn_lbl_6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dsn_lbl_6.Location = new System.Drawing.Point(567, 336);
+            this.dsn_lbl_6.Name = "dsn_lbl_6";
+            this.dsn_lbl_6.Size = new System.Drawing.Size(481, 59);
+            this.dsn_lbl_6.TabIndex = 9;
+            // 
+            // btn_viewStats
+            // 
+            this.btn_viewStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(215)))), ((int)(((byte)(166)))));
+            this.btn_viewStats.FlatAppearance.BorderColor = System.Drawing.Color.DarkSeaGreen;
+            this.btn_viewStats.FlatAppearance.BorderSize = 3;
+            this.btn_viewStats.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_viewStats.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_viewStats.Location = new System.Drawing.Point(583, 431);
+            this.btn_viewStats.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_viewStats.Name = "btn_viewStats";
+            this.btn_viewStats.Size = new System.Drawing.Size(451, 41);
+            this.btn_viewStats.TabIndex = 10;
+            this.btn_viewStats.Text = "View Stats";
+            this.btn_viewStats.UseVisualStyleBackColor = false;
+            this.btn_viewStats.Click += new System.EventHandler(this.btn_viewStats_Click);
+            // 
+            // dsn_lbl_8
+            // 
+            this.dsn_lbl_8.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.dsn_lbl_8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dsn_lbl_8.Location = new System.Drawing.Point(567, 421);
+            this.dsn_lbl_8.Name = "dsn_lbl_8";
+            this.dsn_lbl_8.Size = new System.Drawing.Size(481, 59);
+            this.dsn_lbl_8.TabIndex = 11;
+            // 
+            // dsn_lbl_7
+            // 
+            this.dsn_lbl_7.AutoSize = true;
+            this.dsn_lbl_7.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dsn_lbl_7.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dsn_lbl_7.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.dsn_lbl_7.Location = new System.Drawing.Point(376, 426);
+            this.dsn_lbl_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dsn_lbl_7.Name = "dsn_lbl_7";
+            this.dsn_lbl_7.Size = new System.Drawing.Size(184, 49);
+            this.dsn_lbl_7.TabIndex = 12;
+            this.dsn_lbl_7.Text = "Statistics:";
+            this.dsn_lbl_7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // WelcomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(800, 459);
-            this.Controls.Add(this.losses_count);
-            this.Controls.Add(this.wins_count);
-            this.Controls.Add(this.lbl_losses);
-            this.Controls.Add(this.lbl_wins);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ClientSize = new System.Drawing.Size(1067, 565);
+            this.Controls.Add(this.dsn_lbl_7);
+            this.Controls.Add(this.btn_viewStats);
+            this.Controls.Add(this.dsn_lbl_5);
+            this.Controls.Add(this.dsn_lbl_4);
+            this.Controls.Add(this.dsn_lbl_3);
+            this.Controls.Add(this.dsn_lbl_2);
             this.Controls.Add(this.btn_exit);
-            this.Controls.Add(this.lbl_1);
+            this.Controls.Add(this.dsn_lbl_0);
             this.Controls.Add(this.btn_2player);
             this.Controls.Add(this.btn_1player);
+            this.Controls.Add(this.dsn_lbl_1);
+            this.Controls.Add(this.dsn_lbl_6);
+            this.Controls.Add(this.dsn_lbl_8);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
@@ -152,11 +249,16 @@ namespace Final_ConnectFour
 
         private System.Windows.Forms.Button btn_1player;
         private System.Windows.Forms.Button btn_2player;
-        private System.Windows.Forms.Label lbl_1;
+        private System.Windows.Forms.Label dsn_lbl_0;
         private System.Windows.Forms.Button btn_exit;
-        private System.Windows.Forms.Label lbl_wins;
-        private System.Windows.Forms.Label lbl_losses;
-        private System.Windows.Forms.TextBox wins_count;
-        private System.Windows.Forms.TextBox losses_count;
+        private System.Windows.Forms.Label dsn_lbl_1;
+        private System.Windows.Forms.Label dsn_lbl_2;
+        private System.Windows.Forms.Label dsn_lbl_3;
+        private System.Windows.Forms.Label dsn_lbl_4;
+        private System.Windows.Forms.Label dsn_lbl_5;
+        private System.Windows.Forms.Label dsn_lbl_6;
+        private System.Windows.Forms.Button btn_viewStats;
+        private System.Windows.Forms.Label dsn_lbl_8;
+        private System.Windows.Forms.Label dsn_lbl_7;
     }
 }

@@ -30,5 +30,10 @@ namespace Final_ConnectFour
             gameForm.Show();
             this.Hide();
         }
+
+        private void btn_viewStats_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
