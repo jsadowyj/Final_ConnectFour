@@ -13,11 +13,10 @@ namespace Final_ConnectFour
     public partial class GameForm : Form
     {
 
-        private Board gameBoard;
+        private Board gameBoard = new Board();
         public GameForm()
         {
             InitializeComponent();
-            gameBoard = new Board();
         }
 
         private void GameForm_Load(object sender, EventArgs e)
@@ -86,22 +85,43 @@ namespace Final_ConnectFour
 
         private void roundButton_Click(object sender, EventArgs e)
         {
+            RoundButton roundButton = sender as RoundButton;
 
+            Console.WriteLine(roundButton.Name);
+            roundButton.ChangeHoverColor("Yellow");
         }
 
         private void debug_red_Click(object sender, EventArgs e)
         {
-            roundBtn_0_0.SetRed();
+            for (int row = 0; row < gameBoard.board.GetLength(0); row++)
+            {
+                for (int col = 0; col < gameBoard.board.GetLength(1); col++)
+                {
+                    gameBoard.GetCell(row, col).Button.ChangeHoverColor("Red");
+                }
+            }
         }
 
         private void debug_yellow_Click(object sender, EventArgs e)
         {
-            roundBtn_0_0.SetYellow();
+            for (int row = 0; row < gameBoard.board.GetLength(0); row++)
+            {
+                for (int col = 0; col < gameBoard.board.GetLength(1); col++)
+                {
+                    gameBoard.GetCell(row, col).Button.ChangeHoverColor("Yellow");
+                }
+            }
         }
 
         private void debug_reset_Click(object sender, EventArgs e)
         {
-            roundBtn_0_0.ResetButton();
+            for (int row = 0; row < gameBoard.board.GetLength(0); row++)
+            {
+                for (int col = 0; col < gameBoard.board.GetLength(1); col++)
+                {
+                    gameBoard.GetCell(row, col).Button.ChangeHoverColor("Default");
+                }
+            }
         }
 
 
