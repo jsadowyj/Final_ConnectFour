@@ -96,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Board.png" />
+    <Content Include="Images\Icon.ico" />
     <Content Include="Images\red_piece.png" />
     <Content Include="Images\red_piece_hover.png" />
     <Content Include="Images\yellow_piece.png" />

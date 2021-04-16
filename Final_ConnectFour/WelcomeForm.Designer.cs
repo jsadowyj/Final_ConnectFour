@@ -29,6 +29,7 @@ namespace Final_ConnectFour
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
             this.btn_1player = new System.Windows.Forms.Button();
             this.btn_2player = new System.Windows.Forms.Button();
             this.dsn_lbl_0 = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@ namespace Final_ConnectFour
             this.btn_viewStats = new System.Windows.Forms.Button();
             this.dsn_lbl_8 = new System.Windows.Forms.Label();
             this.dsn_lbl_7 = new System.Windows.Forms.Label();
+            this.dsn_pb_0 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dsn_pb_0)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_1player
@@ -217,6 +220,17 @@ namespace Final_ConnectFour
             this.dsn_lbl_7.Text = "Statistics:";
             this.dsn_lbl_7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // dsn_pb_0
+            // 
+            this.dsn_pb_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.dsn_pb_0.Image = ((System.Drawing.Image)(resources.GetObject("dsn_pb_0.Image")));
+            this.dsn_pb_0.Location = new System.Drawing.Point(1, 184);
+            this.dsn_pb_0.Name = "dsn_pb_0";
+            this.dsn_pb_0.Size = new System.Drawing.Size(375, 364);
+            this.dsn_pb_0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dsn_pb_0.TabIndex = 13;
+            this.dsn_pb_0.TabStop = false;
+            // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,10 +250,13 @@ namespace Final_ConnectFour
             this.Controls.Add(this.dsn_lbl_1);
             this.Controls.Add(this.dsn_lbl_6);
             this.Controls.Add(this.dsn_lbl_8);
+            this.Controls.Add(this.dsn_pb_0);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.WelcomeForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsn_pb_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +277,6 @@ namespace Final_ConnectFour
         private System.Windows.Forms.Button btn_viewStats;
         private System.Windows.Forms.Label dsn_lbl_8;
         private System.Windows.Forms.Label dsn_lbl_7;
+        private System.Windows.Forms.PictureBox dsn_pb_0;
     }
 }
