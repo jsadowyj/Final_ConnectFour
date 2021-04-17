@@ -12,6 +12,7 @@ namespace Final_ConnectFour
 {
     public partial class GameForm : Form
     {
+        int counter = 0;
 
         private Board gameBoard = new Board();
         public GameForm()
@@ -85,10 +86,21 @@ namespace Final_ConnectFour
 
         private void roundButton_Click(object sender, EventArgs e)
         {
+            
             RoundButton roundButton = sender as RoundButton;
 
-            roundButton.PlaceRed();
-            MessageBox.Show(roundButton.Name);
+            if (counter%2 == 0)
+            {
+                roundButton.PlaceRed();
+                MessageBox.Show(roundButton.Name);
+                counter++;
+            }
+            else
+            {
+                roundButton.PlaceYellow();
+                MessageBox.Show(roundButton.Name);
+                counter++;
+            }
         }
 
         private void debug_red_Click(object sender, EventArgs e)
