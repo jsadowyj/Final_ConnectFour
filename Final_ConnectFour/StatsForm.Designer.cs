@@ -98,9 +98,9 @@ namespace Final_ConnectFour
             this.gamesTally_lbl.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.gamesTally_lbl.Location = new System.Drawing.Point(570, 62);
             this.gamesTally_lbl.Name = "gamesTally_lbl";
-            this.gamesTally_lbl.Size = new System.Drawing.Size(243, 58);
+            this.gamesTally_lbl.Size = new System.Drawing.Size(53, 58);
             this.gamesTally_lbl.TabIndex = 4;
-            this.gamesTally_lbl.Text = "enter tally ";
+            this.gamesTally_lbl.Text = "0";
             // 
             // wins_lbl
             // 
@@ -147,7 +147,7 @@ namespace Final_ConnectFour
             this.winsCnt_lbl.Name = "winsCnt_lbl";
             this.winsCnt_lbl.Size = new System.Drawing.Size(272, 58);
             this.winsCnt_lbl.TabIndex = 8;
-            this.winsCnt_lbl.Text = "enter wins";
+            this.winsCnt_lbl.Text = "0";
             this.winsCnt_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lossCnt_lbl
@@ -159,7 +159,7 @@ namespace Final_ConnectFour
             this.lossCnt_lbl.Name = "lossCnt_lbl";
             this.lossCnt_lbl.Size = new System.Drawing.Size(272, 58);
             this.lossCnt_lbl.TabIndex = 9;
-            this.lossCnt_lbl.Text = "enter losses";
+            this.lossCnt_lbl.Text = "0";
             this.lossCnt_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tiesCnt_lbl
@@ -171,7 +171,7 @@ namespace Final_ConnectFour
             this.tiesCnt_lbl.Name = "tiesCnt_lbl";
             this.tiesCnt_lbl.Size = new System.Drawing.Size(272, 58);
             this.tiesCnt_lbl.TabIndex = 10;
-            this.tiesCnt_lbl.Text = "enter ties";
+            this.tiesCnt_lbl.Text = "0";
             this.tiesCnt_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // winPcntHead_lbl
@@ -207,7 +207,7 @@ namespace Final_ConnectFour
             this.winPcnt_lbl.Name = "winPcnt_lbl";
             this.winPcnt_lbl.Size = new System.Drawing.Size(408, 58);
             this.winPcnt_lbl.TabIndex = 13;
-            this.winPcnt_lbl.Text = "enter win percent";
+            this.winPcnt_lbl.Text = "0";
             this.winPcnt_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lossPcnt_lbl
@@ -219,7 +219,7 @@ namespace Final_ConnectFour
             this.lossPcnt_lbl.Name = "lossPcnt_lbl";
             this.lossPcnt_lbl.Size = new System.Drawing.Size(408, 58);
             this.lossPcnt_lbl.TabIndex = 14;
-            this.lossPcnt_lbl.Text = "enter loss percent";
+            this.lossPcnt_lbl.Text = "0";
             this.lossPcnt_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // StatsForm
