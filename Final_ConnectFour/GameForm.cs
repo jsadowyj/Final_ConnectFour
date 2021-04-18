@@ -22,7 +22,8 @@ namespace Final_ConnectFour
         private void GameForm_Load(object sender, EventArgs e)
         {
             // Ok... maybe this is a little hard coded
-
+            // But since the image we used only has a set amount of holes
+            // theres no reason for this to be dynamic.
             // Row One
             gameBoard.AddCell(new Cell(0, 0,roundBtn_0_0));
             gameBoard.AddCell(new Cell(0, 1, roundBtn_0_1));
@@ -129,7 +130,9 @@ namespace Final_ConnectFour
             {
                 for (int col = 0; col < gameBoard.board.GetLength(1); col++)
                 {
-                    gameBoard.GetCell(row, col).Button.ChangeHoverColor("Default");
+                    RoundButton button = gameBoard.GetCell(row, col).Button;
+                    button.ChangeHoverColor("Default");
+                    button.ResetButton();
                 }
             }
         }
