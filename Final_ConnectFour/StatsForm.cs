@@ -12,9 +12,23 @@ namespace Final_ConnectFour
 {
     public partial class StatsForm : Form
     {
+
+        private WelcomeForm parent;
+
         public StatsForm()
         {
             InitializeComponent();
+        }
+
+        public StatsForm(WelcomeForm parent)
+        {
+            InitializeComponent();
+            this.parent = parent;
+        }
+
+        private void StatsForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
         }
     }
 }

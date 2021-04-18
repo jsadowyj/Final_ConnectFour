@@ -245,6 +245,7 @@ namespace Final_ConnectFour
             this.Controls.Add(this.lbl_stats);
             this.Name = "StatsForm";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StatsForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

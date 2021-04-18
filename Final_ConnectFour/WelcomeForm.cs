@@ -33,7 +33,11 @@ namespace Final_ConnectFour
 
         private void btn_viewStats_Click(object sender, EventArgs e)
         {
-
+            StatsForm statsForm = new StatsForm(this);
+            statsForm.StartPosition = FormStartPosition.Manual;
+            statsForm.Location = this.Location;
+            statsForm.Show();
+            this.Hide();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
