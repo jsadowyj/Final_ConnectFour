@@ -12,8 +12,20 @@ namespace Final_ConnectFour
 {
     public partial class GameForm : Form
     {
-        int counter = 0;
         private Board gameBoard = new Board();
+        private int _playerTurn = 1;
+        private int PlayerTurn
+        {
+            get { return _playerTurn; }
+
+            set
+            {
+                _playerTurn = value;
+                lbl_playerTurn.Text = value.ToString();
+                lbl_playerTurn.ForeColor = value == 1 ? System.Drawing.Color.Red : System.Drawing.Color.FromArgb(188, 171, 70);
+            }
+        }
+
         public GameForm()
         {
             InitializeComponent();
@@ -84,44 +96,68 @@ namespace Final_ConnectFour
             Application.Exit();
         }
 
-        private void roundButton_Click(object sender, EventArgs e)
+        private Cell FindOpenCell(RoundButton roundButton)
+        {
+            Cell cell = roundButton.GetCell(gameBoard);
+            int coordinate = gameBoard.GetRows() - 1;
+
+            while (coordinate >= 0)
+            {
+                if (!gameBoard.GetCell(coordinate, cell.Y).IsPlaced)
+                    return gameBoard.GetCell(coordinate, cell.Y);
+                coordinate--;
+            }
+
+            return cell;
+        }
+
+        private void roundButton_MouseEnter(object sender, EventArgs e)
         {
             RoundButton roundButton = sender as RoundButton;
 
-            if (counter % 2 == 0)
+            Cell cell = FindOpenCell(roundButton);
+
+            if (!cell.IsPlaced)
             {
-                roundButton.PlaceRed();
-                MessageBox.Show(roundButton.Name);
-                counter++;
+                cell.Button.ChangeHoverColor(PlayerTurn == 1 ? "Red" : "Yellow");
             }
-            else
+        }
+        private void roundButton_MouseLeave(object sender, EventArgs e)
+        {
+            RoundButton roundButton = sender as RoundButton;
+
+            Cell cell = FindOpenCell(roundButton);
+
+            if (!cell.IsPlaced)
             {
-                roundButton.PlaceYellow();
-                MessageBox.Show(roundButton.Name);
-                counter++;
+                cell.Button.ChangeHoverColor("Default");
             }
         }
 
-        private void debug_red_Click(object sender, EventArgs e)
+        private void roundButton_Click(object sender, EventArgs e)
         {
-            for (int row = 0; row < gameBoard.board.GetLength(0); row++)
-            {
-                for (int col = 0; col < gameBoard.board.GetLength(1); col++)
-                {
-                    gameBoard.GetCell(row, col).Button.ChangeHoverColor("Red");
-                }
-            }
-        }
+            RoundButton roundButtonSender = sender as RoundButton;
 
-        private void debug_yellow_Click(object sender, EventArgs e)
-        {
-            for (int row = 0; row < gameBoard.board.GetLength(0); row++)
+            Cell cell = FindOpenCell(roundButtonSender);
+
+            RoundButton roundButton = cell.Button;
+
+            if (!cell.IsPlaced)
             {
-                for (int col = 0; col < gameBoard.board.GetLength(1); col++)
+                if (PlayerTurn == 1)
                 {
-                    gameBoard.GetCell(row, col).Button.ChangeHoverColor("Yellow");
+                    roundButton.PlaceRed();                 
                 }
-            }
+                else if (PlayerTurn == 2)
+                {
+                    roundButton.PlaceYellow();
+                }
+
+                cell.IsPlaced = true;
+                cell.PlayerNumber = PlayerTurn;
+                PlayerTurn = PlayerTurn == 1 ? 2 : 1;
+                roundButton_MouseEnter(sender, e);
+            } 
         }
 
         private void debug_reset_Click(object sender, EventArgs e)
@@ -130,13 +166,11 @@ namespace Final_ConnectFour
             {
                 for (int col = 0; col < gameBoard.board.GetLength(1); col++)
                 {
-                    RoundButton button = gameBoard.GetCell(row, col).Button;
-                    button.ChangeHoverColor("Default");
-                    button.ResetButton();
+                    gameBoard.GetCell(row, col).Reset();
                 }
             }
+
+            PlayerTurn = 1;
         }
-
-
     }
 }

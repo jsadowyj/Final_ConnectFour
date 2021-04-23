@@ -10,6 +10,10 @@ namespace Final_ConnectFour
     {
         public int X { get; set; }
         public int Y { get; set; }
+        public bool IsPlaced { get; set; } = false;
+        // The default value for player number is -1 if there is no player assigned
+        // this should be used for error checks.
+        public int PlayerNumber { get; set; } = -1;
         public RoundButton Button { get; set; }
 
         public Cell(int x, int y)
@@ -22,6 +26,19 @@ namespace Final_ConnectFour
             this.X = x;
             this.Y = y;
             this.Button = button;
+        }
+
+        // For Debug
+        public override string ToString()
+        {
+            return $"({X}, {Y})";
+        }
+
+        public void Reset()
+        {
+            this.IsPlaced = false;
+            this.PlayerNumber = -1;
+            this.Button.ResetButton();
         }
 
     }

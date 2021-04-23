@@ -8,13 +8,19 @@ using System.Text;
 namespace Final_ConnectFour
 {
     public class RoundButton : Button
-    {
+    { 
         protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
         {
             GraphicsPath grPath = new GraphicsPath();
             grPath.AddEllipse(0, 0, ClientSize.Width, ClientSize.Height);
             this.Region = new System.Drawing.Region(grPath);
             base.OnPaint(e);
+        }
+
+        public Cell GetCell(Board board)
+        {
+            string[] splitStr = this.Name.Split('_');
+            return board.GetCell(int.Parse(splitStr[1]), int.Parse(splitStr[2]));
         }
 
         public void ResetButton()
@@ -34,17 +40,17 @@ namespace Final_ConnectFour
 
         public void ChangeHoverColor(string option)
         {
-            if (option == "Red")
+            switch (option)
             {
-                this.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(255, 122, 122);
-            }
-            else if (option == "Yellow")
-            {
-                this.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(228, 246, 146);
-            }
-            else
-            {
-                this.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(220, 220, 220);
+                case "Red":
+                    this.BackgroundImage = Properties.Resources.red_piece_hover;
+                    break;
+                case "Yellow":
+                    this.BackgroundImage = Properties.Resources.yellow_piece_hover;
+                    break;
+                default:
+                    this.BackgroundImage = null;
+                    break;
             }
         }
     }
