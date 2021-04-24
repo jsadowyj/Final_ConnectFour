@@ -8,9 +8,9 @@ namespace Final_ConnectFour
 {
     public class Cell
     {
-        public int X { get; set; }
-        public int Y { get; set; }
-        public bool IsPlaced { get; set; } = false;
+        public int X { get; }
+        public int Y { get; }
+        public bool IsPlaced { get; private set; } = false;
         // The default value for player number is -1 if there is no player assigned
         // this should be used for error checks.
 
@@ -20,8 +20,8 @@ namespace Final_ConnectFour
         // Computer/AI = 0
         // Player 1 = 1
         // Player 2 = 2
-        public int PlayerNumber { get; set; } = -1;
-        public RoundButton Button { get; set; }
+        public int PlayerNumber { get; private set; } = -1;
+        public RoundButton Button { get; }
 
         public Cell(int x, int y)
         {
