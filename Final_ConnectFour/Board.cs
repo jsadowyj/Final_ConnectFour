@@ -18,19 +18,10 @@ namespace Final_ConnectFour
         //   {(4,0), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6)}, --> Index 4
         //   {(5,0), (5,1), (5,2), (5,3), (5,4), (5,5), (5,6)}, --> Index 5
         // }
-        public Cell[,] board { get; } = new Cell[rows, columns];
+        private Cell[,] board = new Cell[rows, columns];
 
         // Constructor
-
-        public Cell GetCell(int x, int y)
-        {
-            return this.board[x, y];
-        }
-
-        public void AddCell(Cell cell)
-        {
-            board[cell.X, cell.Y] = cell;
-        }
+        public Board() { }
 
         public int GetRows()
         {
@@ -42,7 +33,44 @@ namespace Final_ConnectFour
             return columns;
         }
 
-        // @Todo
-        // Connect buttons with cells
+        public Cell GetCell(int x, int y)
+        {
+            return this.board[x, y];
+        }
+
+        public void AddCell(Cell cell)
+        {
+            this.board[cell.X, cell.Y] = cell;
+        }
+
+        public Cell GetLowestCell(RoundButton roundButton)
+        {
+            Cell cell = roundButton.GetCell(this);
+            int coordinate = rows - 1;
+
+            while (coordinate >= 0)
+            {
+                if (!this.GetCell(coordinate, cell.Y).IsPlaced)
+                    return this.GetCell(coordinate, cell.Y);
+                coordinate--;
+            }
+
+            return cell;
+        }
+
+        // Just in case
+        public Cell GetLowestCell(Cell cell)
+        {
+            int coordinate = rows - 1;
+
+            while (coordinate >= 0)
+            {
+                if (!this.GetCell(coordinate, cell.Y).IsPlaced)
+                    return this.GetCell(coordinate, cell.Y);
+                coordinate--;
+            }
+
+            return cell;
+        }
     }
 }

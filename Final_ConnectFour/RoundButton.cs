@@ -23,17 +23,17 @@ namespace Final_ConnectFour
             return board.GetCell(int.Parse(splitStr[1]), int.Parse(splitStr[2]));
         }
 
-        public void ResetButton()
+        public void Reset()
         {
             this.BackgroundImage = null;
         }
 
-        public void PlaceRed()
+        public void SetRed()
         {
             this.BackgroundImage = Properties.Resources.red_piece;
         }
 
-        public void PlaceYellow()
+        public void SetYellow()
         {
             this.BackgroundImage = Properties.Resources.yellow_piece;
         }
