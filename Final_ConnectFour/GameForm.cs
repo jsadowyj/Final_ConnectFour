@@ -111,6 +111,21 @@ namespace Final_ConnectFour
             return cell;
         }
 
+        // Just in case
+        private Cell FindOpenCell(Cell cell)
+        {
+            int coordinate = gameBoard.GetRows() - 1;
+
+            while (coordinate >= 0)
+            {
+                if (!gameBoard.GetCell(coordinate, cell.Y).IsPlaced)
+                    return gameBoard.GetCell(coordinate, cell.Y);
+                coordinate--;
+            }
+
+            return cell;
+        }
+
         private void roundButton_MouseEnter(object sender, EventArgs e)
         {
             RoundButton roundButton = sender as RoundButton;
