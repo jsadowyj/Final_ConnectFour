@@ -151,25 +151,6 @@ namespace Final_ConnectFour
                     }
                 }
             }
-            /*
-            for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the right
-            {
-                Cell TempCell = board.GetCell(5, row);
-                if (TempCell.PlayerNumber == Type) { Score = 1; }
-                else { Score = 0; }
-                int Over = 1;
-                for (int i = 5; i > 0; i--)
-                {
-                    if (row + Over >= BoardColumns || i - 1 < 0) { break; }
-                    Cell CheckCell = board.GetCell(i - 1, row + Over);
-                    if (CheckCell.PlayerNumber == Type) { Score++; }
-                    else { Score = 0; }
-
-                    if (Score == 4) { GameWon = true; }
-
-                    Over++;
-                }
-            }*/
 
             //Check Diagonal Possibilities Left Up
             for(int j = 5; j > 0; j--)
@@ -193,98 +174,10 @@ namespace Final_ConnectFour
                     }
                 }
             }
-            /*
-            for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the left
-            {
-                Cell TempCell = board.GetCell(5, row);
-                if (TempCell.PlayerNumber == Type) { Score = 1; }
-                else { Score = 0; }
-                int Over = 1;
-                for (int i = 5; i > 0; i--)
-                {
-                    if (row - Over < 0 || i - 1 < 0) { break; }
-                    Cell CheckCell = board.GetCell(i - 1, row - Over);
-                    if (CheckCell.PlayerNumber == Type) { Score++; }
-                    else { Score = 0; }
-
-                    if (Score == 4) { GameWon = true; }
-
-                    Over++;
-                }
-            }
-            */
-
-
-            /*
-            //Diagonal going  up and right
-            Score = 1;
-            int Over = 1;
-            for (int i = cell.X; i > 0; i--)
-            {
-                if (cell.Y + Over >= BoardColumns || i - 1 < 0) { break; }
-                Cell CheckCell = board.GetCell(i - 1, cell.Y + Over);
-                if (CheckCell.PlayerNumber == Type) { Score++; }
-                else { Score = 0; }
-
-                if (Score == 4) { GameWon = true; }
-
-                Over++;
-            }
-
-            //Diagonal going  down and right
-            Score = 1;
-            Over = 1;
-            //Console.WriteLine("Starting at Cell " + cell.X + ", " + cell.Y);
-            for (int i = cell.X; i < BoardColumns; i++)
-            {
-                if (cell.Y - Over <= 0 || i + 1 >= BoardRows) { break; }
-                Cell CheckCell = board.GetCell(i + 1, cell.Y - Over);
-                if (CheckCell.PlayerNumber == Type) { Score++; }
-                else { Score = 0; }
-
-                if (Score == 4) { GameWon = true; }
-
-                //Console.WriteLine("Checked cell" + CheckCell.X + ", " + CheckCell.Y);
-                //Console.WriteLine("Score = " + Score);
-
-                Over++;
-            }
-
-            //Diagonal going up and left
-            Score = 1;
-            Over = 1;
-            for (int i = cell.X; i > 0; i--)
-            {
-                if (cell.Y - Over <= 0 || i - 1 < 0) { break; }
-                Cell CheckCell = board.GetCell(i - 1, cell.Y - Over);
-                if (CheckCell.PlayerNumber == Type) { Score++; }
-                else { Score = 0; }
-
-                if (Score == 4) { GameWon = true; }
-
-                Over++;
-            }
-
-            //Diagonal going down and left
-            Score = 1;
-            Over = 1;
-            for (int i = cell.X; i < BoardColumns; i++)
-            {
-                if (cell.Y - Over <= 0 || i + 1 >= BoardRows) { break; }
-                Cell CheckCell = board.GetCell(i + 1, cell.Y - Over);
-                if (CheckCell.PlayerNumber == Type) { Score++; }
-                else { Score = 0; }
-
-                if (Score == 4) { GameWon = true; }
-
-                //Console.WriteLine("Checked cell" + CheckCell.X + ", " + CheckCell.Y);
-                //Console.WriteLine("Score = " + Score);
-
-                Over++;
-            }*/
 
             if (GameWon)
             {
+                //Put GameWonForm here
                 MessageBox.Show("Win",
                 "Win",
                 MessageBoxButtons.OK,
@@ -340,6 +233,8 @@ namespace Final_ConnectFour
             } 
         }
 
+        // Commented out as removed debug button
+        /*
         private void debug_reset_Click(object sender, EventArgs e)
         {
             for (int row = 0; row < board.GetRows(); row++)
@@ -352,5 +247,6 @@ namespace Final_ConnectFour
             PlayerTurn = 1;
             GameWon = false;
         }
+        */
     }
 }
