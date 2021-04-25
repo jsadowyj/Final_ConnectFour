@@ -208,26 +208,16 @@ namespace Final_ConnectFour
             }
 
             // Check for game draw
-            if (piecesPlaced == board.GetRows() * board.GetColumns()) GameDraw = true;
+            if (piecesPlaced >= board.GetRows() * board.GetColumns()) GameDraw = true;
 
             if (GameWon || GameDraw)
             {
                 DisableGame();
-
-                if (GameWon)
-                {
-                    GameWonForm gameWonForm = new GameWonForm(this, Type);
-                    gameWonForm.StartPosition = FormStartPosition.CenterParent;
-                    this.Hide();
-                    gameWonForm.ShowDialog();
-                } 
-                else if (GameDraw)
-                {
-                    GameWonForm gameWonForm = new GameWonForm(this);
-                    gameWonForm.StartPosition = FormStartPosition.CenterParent;
-                    this.Hide();
-                    gameWonForm.ShowDialog();
-                }
+                GameWonForm gameWonForm = new GameWonForm(this, Type); ;
+                if (GameDraw) gameWonForm = new GameWonForm(this);
+                gameWonForm.StartPosition = FormStartPosition.CenterParent;
+                this.Hide();
+                gameWonForm.ShowDialog();
 
             }
         }
@@ -277,7 +267,7 @@ namespace Final_ConnectFour
                 PlayerTurn = PlayerTurn == 1 ? 2 : 1;
                 piecesPlaced++;
                 CheckForWin(cell);
-                if (!GameWon) roundButton_MouseEnter(sender, e);
+                if (!GameWon && !GameDraw) roundButton_MouseEnter(sender, e);
             }
         }
 
