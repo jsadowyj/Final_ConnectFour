@@ -14,6 +14,7 @@ namespace Final_ConnectFour
     {
         private readonly Board board = new Board();
         private int _playerTurn = 1;
+        private bool GameWon = false;
         private int PlayerTurn
         {
             get { return _playerTurn; }
@@ -93,6 +94,73 @@ namespace Final_ConnectFour
 
         private void GameForm_FormClosing(object sender, FormClosingEventArgs e) => Application.Exit();
 
+        //Game Win Function (Kyle Bartram)
+        private void CheckForWin(Cell cell)
+        {
+            int MaxUp = cell.X;
+            int MaxDown = 6 - cell.X;
+            int MaxRight = 6 - cell.Y;
+            int MaxLeft = cell.Y;
+
+            int BoardRows = board.GetRows();
+            int BoardColumns = board.GetColumns();
+
+            int Type = cell.PlayerNumber;
+
+            //My logic for checking horizontal and vertical is it would be easier to check the whole row rather than to code a function 
+            // that checks only possibilities based off of the piece placed
+
+            //Check horizontal possibilities
+            int Score = 0;
+            for (int i = 0; i < BoardColumns; i++)
+            {
+                Cell CheckCell = board.GetCell(cell.X, i);
+                if (CheckCell.PlayerNumber == Type)
+                {
+                    Score++;
+                }
+                else
+                {
+                    Score = 0;
+                }
+
+                if(Score == 4)
+                {
+                    GameWon = true;
+                }
+            }
+
+            //Check vertical possibilities
+            Score = 0;
+            for (int i = 0; i < BoardRows; i++)
+            {
+                Cell CheckCell = board.GetCell(i, cell.Y);
+                if (CheckCell.PlayerNumber == Type)
+                {
+                    Score++;
+                }
+                else
+                {
+                    Score = 0;
+                }
+
+                if (Score == 4)
+                {
+                    GameWon = true;
+                }
+            }
+
+            //Check diagonal possibilities (the hard part?)
+
+            if(GameWon)
+            {
+                MessageBox.Show("Win",
+                "Win",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information  );
+            }
+        }
+
         private void roundButton_MouseEnter(object sender, EventArgs e)
         {
             RoundButton roundButton = sender as RoundButton;
@@ -136,6 +204,7 @@ namespace Final_ConnectFour
                 }
                 // Would you guys rather have the PlayerTurn assignments in the if or in a ternary like this?
                 PlayerTurn = PlayerTurn == 1 ? 2 : 1;
+                CheckForWin(cell);
                 roundButton_MouseEnter(sender, e);
             } 
         }
@@ -150,6 +219,7 @@ namespace Final_ConnectFour
                 }
             }
             PlayerTurn = 1;
+            GameWon = false;
         }
     }
 }
