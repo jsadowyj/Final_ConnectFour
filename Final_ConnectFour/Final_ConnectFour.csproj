@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="Cell.cs" />
+    <Compile Include="GameFormComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameFormComputer.Designer.cs">
+      <DependentUpon>GameFormComputer.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameWonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GameFormComputer.resx">
+      <DependentUpon>GameFormComputer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>
     </EmbeddedResource>

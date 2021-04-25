@@ -12,9 +12,12 @@ namespace Final_ConnectFour
 {
     public partial class GameWonForm : Form
     {
-        private GameForm parent;
+        // This is probably a really bad way to go about this...
+        // but I would rather we just reuse this form than make a whole new winner form
+        // for the Player vs Computer
+        private dynamic parent;
         private bool shouldExit = true;
-        public GameWonForm(GameForm parent)
+        public GameWonForm(dynamic parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -22,7 +25,7 @@ namespace Final_ConnectFour
             lbl_header.Text = "Draw!";
         }
 
-        public GameWonForm(GameForm parent, int playerNumber)
+        public GameWonForm(dynamic parent, int playerNumber)
         {
             InitializeComponent();
             this.parent = parent;
@@ -56,11 +59,23 @@ namespace Final_ConnectFour
 
         private void btn_playAgain_Click(object sender, EventArgs e)
         {
-            GameForm gameForm = new GameForm(this.parent.parent);
-            gameForm.StartPosition = FormStartPosition.CenterScreen;
-            gameForm.Show();
-            shouldExit = false;
-            this.Close();
+            if (parent is GameForm)
+            {
+                GameForm gameForm = new GameForm(this.parent.parent);
+                gameForm.StartPosition = FormStartPosition.CenterScreen;
+                gameForm.Show();
+                shouldExit = false;
+                this.Close();
+            }
+            else
+            {
+                GameFormComputer gameFormComputer = new GameFormComputer(this.parent.parent);
+                gameFormComputer.StartPosition = FormStartPosition.CenterScreen;
+                gameFormComputer.Show();
+                shouldExit = false;
+                this.Close();
+            }
+
         }
     }
 }

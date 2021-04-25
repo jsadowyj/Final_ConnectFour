@@ -22,6 +22,15 @@ namespace Final_ConnectFour
 
         }
 
+        private void btn_1player_Click(object sender, EventArgs e)
+        {
+            GameFormComputer gameFormComputer = new GameFormComputer(this);
+            gameFormComputer.StartPosition = FormStartPosition.Manual;
+            gameFormComputer.Location = this.Location;
+            gameFormComputer.Show();
+            this.Hide();
+        }
+
         private void btn_2player_Click(object sender, EventArgs e)
         {
             GameForm gameForm = new GameForm(this);
@@ -44,5 +53,7 @@ namespace Final_ConnectFour
         {
             Application.Exit();
         }
+
+
     }
 }
