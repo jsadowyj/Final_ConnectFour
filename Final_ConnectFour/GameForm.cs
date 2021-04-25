@@ -12,7 +12,7 @@ namespace Final_ConnectFour
 {
     public partial class GameForm : Form
     {
-        private WelcomeForm parent;
+        public WelcomeForm parent { get; }
         private readonly Board board = new Board();
         private int _playerTurn = 1;
         private int PlayerTurn
@@ -216,19 +216,17 @@ namespace Final_ConnectFour
 
                 if (GameWon)
                 {
-                    //Put GameWonForm here
-                    MessageBox.Show("Win",
-                    "Win",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                    GameWonForm gameWonForm = new GameWonForm(this, Type);
+                    gameWonForm.StartPosition = FormStartPosition.CenterParent;
+                    this.Hide();
+                    gameWonForm.ShowDialog();
                 } 
                 else if (GameDraw)
                 {
-                    //Put GameDrawForm here
-                    MessageBox.Show("Draw!",
-                    "Draw!",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                    GameWonForm gameWonForm = new GameWonForm(this);
+                    gameWonForm.StartPosition = FormStartPosition.CenterParent;
+                    this.Hide();
+                    gameWonForm.ShowDialog();
                 }
 
             }

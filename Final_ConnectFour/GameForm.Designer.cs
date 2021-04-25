@@ -87,7 +87,7 @@ namespace Final_ConnectFour
             this.pb_board.BackColor = System.Drawing.Color.Transparent;
             this.pb_board.Image = ((System.Drawing.Image)(resources.GetObject("pb_board.Image")));
             this.pb_board.Location = new System.Drawing.Point(1, 0);
-            this.pb_board.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_board.Margin = new System.Windows.Forms.Padding(2);
             this.pb_board.Name = "pb_board";
             this.pb_board.Size = new System.Drawing.Size(600, 593);
             this.pb_board.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -946,7 +946,7 @@ namespace Final_ConnectFour
             this.Controls.Add(this.pb_board);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "GameForm";
             this.Text = "Connect Four";
@@ -1006,8 +1006,8 @@ namespace Final_ConnectFour
         private System.Windows.Forms.Label lbl_info;
         private System.Windows.Forms.Label lbl_playerTurn;
         private System.Windows.Forms.Label lbl_background;
-        private System.Windows.Forms.Button btn_menu;
         private System.Windows.Forms.Button btn_restart;
         private System.Windows.Forms.Label lbl_gameOver;
+        private System.Windows.Forms.Button btn_menu;
     }
 }
