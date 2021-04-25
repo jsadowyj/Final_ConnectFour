@@ -130,7 +130,29 @@ namespace Final_ConnectFour
             }
 
             //Check Diagonal Possibilities Right Up
-            for (int row = 0; row < board.GetRows(); row++)                                 //Checks all possibilities going up and to the right
+            for(int j = 5; j > 0; j--)
+            {
+                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the right
+                {
+                    Cell TempCell = board.GetCell(j, row);
+                    if (TempCell.PlayerNumber == Type) { Score = 1; }
+                    else { Score = 0; }
+                    int Over = 1;
+                    for (int i = j; i > 0; i--)
+                    {
+                        if (row + Over >= BoardColumns || i - 1 < 0) { break; }
+                        Cell CheckCell = board.GetCell(i - 1, row + Over);
+                        if (CheckCell.PlayerNumber == Type) { Score++; }
+                        else { Score = 0; }
+
+                        if (Score == 4) { GameWon = true; }
+
+                        Over++;
+                    }
+                }
+            }
+            /*
+            for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the right
             {
                 Cell TempCell = board.GetCell(5, row);
                 if (TempCell.PlayerNumber == Type) { Score = 1; }
@@ -147,10 +169,32 @@ namespace Final_ConnectFour
 
                     Over++;
                 }
-            }
+            }*/
 
             //Check Diagonal Possibilities Left Up
-            for (int row = 0; row < board.GetRows(); row++)                                 //Checks all possibilities going up and to the left
+            for(int j = 5; j > 0; j--)
+            {
+                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the left
+                {
+                    Cell TempCell = board.GetCell(j, row);
+                    if (TempCell.PlayerNumber == Type) { Score = 1; }
+                    else { Score = 0; }
+                    int Over = 1;
+                    for (int i = j; i > 0; i--)
+                    {
+                        if (row - Over < 0 || i - 1 < 0) { break; }
+                        Cell CheckCell = board.GetCell(i - 1, row - Over);
+                        if (CheckCell.PlayerNumber == Type) { Score++; }
+                        else { Score = 0; }
+
+                        if (Score == 4) { GameWon = true; }
+
+                        Over++;
+                    }
+                }
+            }
+            /*
+            for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the left
             {
                 Cell TempCell = board.GetCell(5, row);
                 if (TempCell.PlayerNumber == Type) { Score = 1; }
@@ -168,6 +212,7 @@ namespace Final_ConnectFour
                     Over++;
                 }
             }
+            */
 
 
             /*
