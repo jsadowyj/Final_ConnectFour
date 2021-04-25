@@ -97,6 +97,8 @@ namespace Final_ConnectFour
         //Game Win Function (Kyle Bartram)
         private void CheckForWin(Cell cell)
         {
+            GameWon = false;
+
             int BoardRows = board.GetRows();
             int BoardColumns = board.GetColumns();
 
