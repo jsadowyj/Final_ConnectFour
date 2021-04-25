@@ -12,9 +12,9 @@ namespace Final_ConnectFour
 {
     public partial class GameForm : Form
     {
+        private WelcomeForm parent;
         private readonly Board board = new Board();
         private int _playerTurn = 1;
-        private bool GameWon = false;
         private int PlayerTurn
         {
             get { return _playerTurn; }
@@ -22,14 +22,21 @@ namespace Final_ConnectFour
             set
             {
                 _playerTurn = value;
-                lbl_playerTurn.Text = value.ToString();
-                lbl_playerTurn.ForeColor = value == 1 ? System.Drawing.Color.Red : System.Drawing.Color.FromArgb(188, 171, 70);
+                lbl_playerTurn.Text = value == 1 ? "Red" : "Yellow";
+                lbl_playerTurn.ForeColor = value == 1 
+                    ? System.Drawing.Color.FromArgb(213,46,48) 
+                    : System.Drawing.Color.FromArgb(188, 171, 70);
             }
         }
+        private int piecesPlaced = 0;
+        private bool GameWon = false;
+        private bool GameDraw = false;
+        private bool shouldExit = true;
 
-        public GameForm()
+        public GameForm(WelcomeForm parent)
         {
             InitializeComponent();
+            this.parent = parent;
         }
 
         private void GameForm_Load(object sender, EventArgs e)
@@ -90,9 +97,34 @@ namespace Final_ConnectFour
             board.AddCell(new Cell(5, 4, roundBtn_5_4));
             board.AddCell(new Cell(5, 5, roundBtn_5_5));
             board.AddCell(new Cell(5, 6, roundBtn_5_6));
+
+            for (int row = 0; row < board.GetRows(); row++)
+            {
+                for (int col = 0; col < board.GetColumns(); col++)
+                {
+                    board.GetCell(row, col).Button.SetParent(pb_board);
+                }
+            }
         }
 
-        private void GameForm_FormClosing(object sender, FormClosingEventArgs e) => Application.Exit();
+        private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (shouldExit) Application.Exit();
+        }
+
+        private void DisableGame()
+        {
+            lbl_info.Visible = false;
+            lbl_playerTurn.Visible = false;
+            lbl_gameOver.Visible = true;
+            for (int row = 0; row < board.GetRows(); row++)
+            {
+                for (int col = 0; col < board.GetColumns(); col++)
+                {
+                    board.GetCell(row, col).Button.Enabled = false;
+                }
+            }
+        }
 
         //Game Win Function (Kyle Bartram)
         private void CheckForWin(Cell cell)
@@ -175,13 +207,30 @@ namespace Final_ConnectFour
                 }
             }
 
-            if (GameWon)
+            // Check for game draw
+            if (piecesPlaced == board.GetRows() * board.GetColumns()) GameDraw = true;
+
+            if (GameWon || GameDraw)
             {
-                //Put GameWonForm here
-                MessageBox.Show("Win",
-                "Win",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information  );
+                DisableGame();
+
+                if (GameWon)
+                {
+                    //Put GameWonForm here
+                    MessageBox.Show("Win",
+                    "Win",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                } 
+                else if (GameDraw)
+                {
+                    //Put GameDrawForm here
+                    MessageBox.Show("Draw!",
+                    "Draw!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+
             }
         }
 
@@ -228,15 +277,18 @@ namespace Final_ConnectFour
                 }
                 // Would you guys rather have the PlayerTurn assignments in the if or in a ternary like this?
                 PlayerTurn = PlayerTurn == 1 ? 2 : 1;
+                piecesPlaced++;
                 CheckForWin(cell);
-                roundButton_MouseEnter(sender, e);
-            } 
+                if (!GameWon) roundButton_MouseEnter(sender, e);
+            }
         }
 
-        // Commented out as removed debug button
-        /*
-        private void debug_reset_Click(object sender, EventArgs e)
+        private void btn_restart_Click(object sender, EventArgs e)
         {
+            piecesPlaced = 0;
+            lbl_gameOver.Visible = false;
+            lbl_info.Visible = true;
+            lbl_playerTurn.Visible = true;
             for (int row = 0; row < board.GetRows(); row++)
             {
                 for (int col = 0; col < board.GetColumns(); col++)
@@ -246,7 +298,14 @@ namespace Final_ConnectFour
             }
             PlayerTurn = 1;
             GameWon = false;
+            GameDraw = false;
+    }
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            parent.Show();
+            shouldExit = false;
+            this.Close();
         }
-        */
     }
 }

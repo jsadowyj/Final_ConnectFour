@@ -36,6 +36,7 @@ namespace Final_ConnectFour
         }
         public void Reset()
         {
+            this.Button.Enabled = true;
             this.IsPlaced = false;
             this.PlayerNumber = -1;
             this.Button.Reset();

@@ -23,6 +23,11 @@ namespace Final_ConnectFour
             return board.GetCell(int.Parse(splitStr[1]), int.Parse(splitStr[2]));
         }
 
+        public void SetParent(PictureBox pictureBox)
+        {
+            this.Parent = pictureBox;
+        }
+
         public void Reset()
         {
             this.BackgroundImage = null;
