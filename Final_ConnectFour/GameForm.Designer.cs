@@ -84,7 +84,7 @@ namespace Final_ConnectFour
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -170,7 +170,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_5_6
             // 
-            this.roundBtn_5_6.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_5_6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_5_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_5_6.FlatAppearance.BorderSize = 0;
             this.roundBtn_5_6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -188,7 +188,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_5_5
             // 
-            this.roundBtn_5_5.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_5_5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_5_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_5_5.FlatAppearance.BorderSize = 0;
             this.roundBtn_5_5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -206,7 +206,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_5_4
             // 
-            this.roundBtn_5_4.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_5_4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_5_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_5_4.FlatAppearance.BorderSize = 0;
             this.roundBtn_5_4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -224,7 +224,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_5_3
             // 
-            this.roundBtn_5_3.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_5_3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_5_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_5_3.FlatAppearance.BorderSize = 0;
             this.roundBtn_5_3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -242,7 +242,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_5_2
             // 
-            this.roundBtn_5_2.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_5_2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_5_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_5_2.FlatAppearance.BorderSize = 0;
             this.roundBtn_5_2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -260,7 +260,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_5_1
             // 
-            this.roundBtn_5_1.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_5_1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_5_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_5_1.FlatAppearance.BorderSize = 0;
             this.roundBtn_5_1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -278,7 +278,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_5_0
             // 
-            this.roundBtn_5_0.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_5_0.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_5_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_5_0.FlatAppearance.BorderSize = 0;
             this.roundBtn_5_0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -296,7 +296,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_4_6
             // 
-            this.roundBtn_4_6.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_4_6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_4_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_4_6.FlatAppearance.BorderSize = 0;
             this.roundBtn_4_6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -314,7 +314,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_4_5
             // 
-            this.roundBtn_4_5.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_4_5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_4_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_4_5.FlatAppearance.BorderSize = 0;
             this.roundBtn_4_5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -332,7 +332,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_4_4
             // 
-            this.roundBtn_4_4.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_4_4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_4_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_4_4.FlatAppearance.BorderSize = 0;
             this.roundBtn_4_4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -350,7 +350,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_4_3
             // 
-            this.roundBtn_4_3.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_4_3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_4_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_4_3.FlatAppearance.BorderSize = 0;
             this.roundBtn_4_3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -368,7 +368,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_4_2
             // 
-            this.roundBtn_4_2.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_4_2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_4_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_4_2.FlatAppearance.BorderSize = 0;
             this.roundBtn_4_2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -386,7 +386,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_4_1
             // 
-            this.roundBtn_4_1.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_4_1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_4_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_4_1.FlatAppearance.BorderSize = 0;
             this.roundBtn_4_1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -404,7 +404,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_4_0
             // 
-            this.roundBtn_4_0.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_4_0.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_4_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_4_0.FlatAppearance.BorderSize = 0;
             this.roundBtn_4_0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -422,7 +422,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_3_6
             // 
-            this.roundBtn_3_6.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_3_6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_3_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_3_6.FlatAppearance.BorderSize = 0;
             this.roundBtn_3_6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -440,7 +440,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_3_5
             // 
-            this.roundBtn_3_5.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_3_5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_3_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_3_5.FlatAppearance.BorderSize = 0;
             this.roundBtn_3_5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -458,7 +458,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_3_4
             // 
-            this.roundBtn_3_4.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_3_4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_3_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_3_4.FlatAppearance.BorderSize = 0;
             this.roundBtn_3_4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -476,7 +476,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_3_3
             // 
-            this.roundBtn_3_3.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_3_3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_3_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_3_3.FlatAppearance.BorderSize = 0;
             this.roundBtn_3_3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -494,7 +494,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_3_2
             // 
-            this.roundBtn_3_2.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_3_2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_3_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_3_2.FlatAppearance.BorderSize = 0;
             this.roundBtn_3_2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -512,7 +512,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_3_1
             // 
-            this.roundBtn_3_1.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_3_1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_3_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_3_1.FlatAppearance.BorderSize = 0;
             this.roundBtn_3_1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -530,7 +530,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_3_0
             // 
-            this.roundBtn_3_0.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_3_0.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_3_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_3_0.FlatAppearance.BorderSize = 0;
             this.roundBtn_3_0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -548,7 +548,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_2_6
             // 
-            this.roundBtn_2_6.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_2_6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_2_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_2_6.FlatAppearance.BorderSize = 0;
             this.roundBtn_2_6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -566,7 +566,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_2_5
             // 
-            this.roundBtn_2_5.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_2_5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_2_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_2_5.FlatAppearance.BorderSize = 0;
             this.roundBtn_2_5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -584,7 +584,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_2_4
             // 
-            this.roundBtn_2_4.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_2_4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_2_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_2_4.FlatAppearance.BorderSize = 0;
             this.roundBtn_2_4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -602,7 +602,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_2_3
             // 
-            this.roundBtn_2_3.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_2_3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_2_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_2_3.FlatAppearance.BorderSize = 0;
             this.roundBtn_2_3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -620,7 +620,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_2_2
             // 
-            this.roundBtn_2_2.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_2_2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_2_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_2_2.FlatAppearance.BorderSize = 0;
             this.roundBtn_2_2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -638,7 +638,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_2_1
             // 
-            this.roundBtn_2_1.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_2_1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_2_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_2_1.FlatAppearance.BorderSize = 0;
             this.roundBtn_2_1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -656,7 +656,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_2_0
             // 
-            this.roundBtn_2_0.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_2_0.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_2_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_2_0.FlatAppearance.BorderSize = 0;
             this.roundBtn_2_0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -674,7 +674,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_1_6
             // 
-            this.roundBtn_1_6.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_1_6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_1_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_1_6.FlatAppearance.BorderSize = 0;
             this.roundBtn_1_6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -692,7 +692,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_1_5
             // 
-            this.roundBtn_1_5.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_1_5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_1_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_1_5.FlatAppearance.BorderSize = 0;
             this.roundBtn_1_5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -710,7 +710,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_1_4
             // 
-            this.roundBtn_1_4.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_1_4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_1_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_1_4.FlatAppearance.BorderSize = 0;
             this.roundBtn_1_4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -728,7 +728,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_1_3
             // 
-            this.roundBtn_1_3.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_1_3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_1_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_1_3.FlatAppearance.BorderSize = 0;
             this.roundBtn_1_3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -746,7 +746,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_1_2
             // 
-            this.roundBtn_1_2.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_1_2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_1_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_1_2.FlatAppearance.BorderSize = 0;
             this.roundBtn_1_2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -764,7 +764,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_1_1
             // 
-            this.roundBtn_1_1.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_1_1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_1_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_1_1.FlatAppearance.BorderSize = 0;
             this.roundBtn_1_1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -782,7 +782,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_1_0
             // 
-            this.roundBtn_1_0.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_1_0.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_1_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_1_0.FlatAppearance.BorderSize = 0;
             this.roundBtn_1_0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -800,7 +800,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_0_6
             // 
-            this.roundBtn_0_6.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_0_6.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_0_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_0_6.FlatAppearance.BorderSize = 0;
             this.roundBtn_0_6.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -818,7 +818,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_0_5
             // 
-            this.roundBtn_0_5.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_0_5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_0_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_0_5.FlatAppearance.BorderSize = 0;
             this.roundBtn_0_5.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -836,7 +836,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_0_4
             // 
-            this.roundBtn_0_4.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_0_4.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_0_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_0_4.FlatAppearance.BorderSize = 0;
             this.roundBtn_0_4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -854,7 +854,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_0_3
             // 
-            this.roundBtn_0_3.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_0_3.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_0_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_0_3.FlatAppearance.BorderSize = 0;
             this.roundBtn_0_3.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -872,7 +872,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_0_2
             // 
-            this.roundBtn_0_2.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_0_2.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_0_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_0_2.FlatAppearance.BorderSize = 0;
             this.roundBtn_0_2.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -890,7 +890,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_0_1
             // 
-            this.roundBtn_0_1.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_0_1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_0_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_0_1.FlatAppearance.BorderSize = 0;
             this.roundBtn_0_1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
@@ -908,7 +908,7 @@ namespace Final_ConnectFour
             // 
             // roundBtn_0_0
             // 
-            this.roundBtn_0_0.BackColor = System.Drawing.SystemColors.Control;
+            this.roundBtn_0_0.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.roundBtn_0_0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.roundBtn_0_0.FlatAppearance.BorderSize = 0;
             this.roundBtn_0_0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
