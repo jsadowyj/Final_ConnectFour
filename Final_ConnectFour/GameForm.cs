@@ -97,11 +97,6 @@ namespace Final_ConnectFour
         //Game Win Function (Kyle Bartram)
         private void CheckForWin(Cell cell)
         {
-            int MaxUp = cell.X;
-            int MaxDown = 6 - cell.X;
-            int MaxRight = 6 - cell.Y;
-            int MaxLeft = cell.Y;
-
             int BoardRows = board.GetRows();
             int BoardColumns = board.GetColumns();
 
@@ -115,19 +110,10 @@ namespace Final_ConnectFour
             for (int i = 0; i < BoardColumns; i++)
             {
                 Cell CheckCell = board.GetCell(cell.X, i);
-                if (CheckCell.PlayerNumber == Type)
-                {
-                    Score++;
-                }
-                else
-                {
-                    Score = 0;
-                }
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
 
-                if(Score == 4)
-                {
-                    GameWon = true;
-                }
+                if(Score == 4) { GameWon = true; }
             }
 
             //Check vertical possibilities
@@ -135,24 +121,122 @@ namespace Final_ConnectFour
             for (int i = 0; i < BoardRows; i++)
             {
                 Cell CheckCell = board.GetCell(i, cell.Y);
-                if (CheckCell.PlayerNumber == Type)
-                {
-                    Score++;
-                }
-                else
-                {
-                    Score = 0;
-                }
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
 
-                if (Score == 4)
+                if (Score == 4) { GameWon = true; }
+            }
+
+            //Check Diagonal Possibilities Right Up
+            for (int row = 0; row < board.GetRows(); row++)                                 //Checks all possibilities going up and to the right
+            {
+                Cell TempCell = board.GetCell(5, row);
+                if (TempCell.PlayerNumber == Type) { Score = 1; }
+                else { Score = 0; }
+                int Over = 1;
+                for (int i = 5; i > 0; i--)
                 {
-                    GameWon = true;
+                    if (row + Over >= BoardColumns || i - 1 < 0) { break; }
+                    Cell CheckCell = board.GetCell(i - 1, row + Over);
+                    if (CheckCell.PlayerNumber == Type) { Score++; }
+                    else { Score = 0; }
+
+                    if (Score == 4) { GameWon = true; }
+
+                    Over++;
                 }
             }
 
-            //Check diagonal possibilities (the hard part?)
+            //Check Diagonal Possibilities Left Up
+            for (int row = 0; row < board.GetRows(); row++)                                 //Checks all possibilities going up and to the left
+            {
+                Cell TempCell = board.GetCell(5, row);
+                if (TempCell.PlayerNumber == Type) { Score = 1; }
+                else { Score = 0; }
+                int Over = 1;
+                for (int i = 5; i > 0; i--)
+                {
+                    if (row - Over < 0 || i - 1 < 0) { break; }
+                    Cell CheckCell = board.GetCell(i - 1, row - Over);
+                    if (CheckCell.PlayerNumber == Type) { Score++; }
+                    else { Score = 0; }
 
-            if(GameWon)
+                    if (Score == 4) { GameWon = true; }
+
+                    Over++;
+                }
+            }
+
+
+            /*
+            //Diagonal going  up and right
+            Score = 1;
+            int Over = 1;
+            for (int i = cell.X; i > 0; i--)
+            {
+                if (cell.Y + Over >= BoardColumns || i - 1 < 0) { break; }
+                Cell CheckCell = board.GetCell(i - 1, cell.Y + Over);
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
+
+                if (Score == 4) { GameWon = true; }
+
+                Over++;
+            }
+
+            //Diagonal going  down and right
+            Score = 1;
+            Over = 1;
+            //Console.WriteLine("Starting at Cell " + cell.X + ", " + cell.Y);
+            for (int i = cell.X; i < BoardColumns; i++)
+            {
+                if (cell.Y - Over <= 0 || i + 1 >= BoardRows) { break; }
+                Cell CheckCell = board.GetCell(i + 1, cell.Y - Over);
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
+
+                if (Score == 4) { GameWon = true; }
+
+                //Console.WriteLine("Checked cell" + CheckCell.X + ", " + CheckCell.Y);
+                //Console.WriteLine("Score = " + Score);
+
+                Over++;
+            }
+
+            //Diagonal going up and left
+            Score = 1;
+            Over = 1;
+            for (int i = cell.X; i > 0; i--)
+            {
+                if (cell.Y - Over <= 0 || i - 1 < 0) { break; }
+                Cell CheckCell = board.GetCell(i - 1, cell.Y - Over);
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
+
+                if (Score == 4) { GameWon = true; }
+
+                Over++;
+            }
+
+            //Diagonal going down and left
+            Score = 1;
+            Over = 1;
+            for (int i = cell.X; i < BoardColumns; i++)
+            {
+                if (cell.Y - Over <= 0 || i + 1 >= BoardRows) { break; }
+                Cell CheckCell = board.GetCell(i + 1, cell.Y - Over);
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
+
+                if (Score == 4) { GameWon = true; }
+
+                //Console.WriteLine("Checked cell" + CheckCell.X + ", " + CheckCell.Y);
+                //Console.WriteLine("Score = " + Score);
+
+                Over++;
+            }*/
+
+            if (GameWon)
             {
                 MessageBox.Show("Win",
                 "Win",
