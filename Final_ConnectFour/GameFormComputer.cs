@@ -127,7 +127,7 @@ namespace Final_ConnectFour
         }
 
         //Game Win Function (Kyle Bartram)
-        private void CheckForWin(Cell cell)
+        private void CheckForWin(Cell cell, Board board)
         {
             GameWon = false;
 
@@ -403,7 +403,7 @@ namespace Final_ConnectFour
                 // Would you guys rather have the PlayerTurn assignments in the if or in a ternary like this?
                 piecesPlaced++;
                 
-                CheckForWin(cell);
+                CheckForWin(cell, board);
                 AI(roundButton, cell);
                 if (!GameWon) roundButton_MouseEnter(sender, e);
             }
