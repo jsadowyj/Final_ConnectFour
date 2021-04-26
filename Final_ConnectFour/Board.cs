@@ -23,6 +23,18 @@ namespace Final_ConnectFour
         // Constructor
         public Board() { }
 
+        // Create copy of board
+        public Board(Board boardtoCopy)
+        {
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < columns; col++)
+                {
+                    this.AddCell(boardtoCopy.GetCell(row, col));
+                }
+            }
+        }
+
         public int GetRows()
         {
             return rows;
