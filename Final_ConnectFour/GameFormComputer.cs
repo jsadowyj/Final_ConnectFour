@@ -274,12 +274,10 @@ namespace Final_ConnectFour
                 Cell CheckCell = board.GetCell(cell.X, i);
                 if (Score == 3)
                 {
-                    cell1 = board.GetLowestCell(CheckCell);
-                    if (cell1 == CheckCell)
-                    {
+                    
                         CheckCell.PlaceYellow(2);
                         return;
-                    }
+                  
                 }
                 else
                 {
@@ -290,24 +288,22 @@ namespace Final_ConnectFour
 
             }
 
-            Score = 0;
-           // for (int i = 5; i > 0; i--)
-            //{
+           Score = 0;
+           for (int i = 6; i > 0; i--)
+           {
 
-              //  Cell CheckCell = board.GetCell(cell.X, i);
-                //if (Score == 3)
-                //{
-                  //  cell1.PlaceYellow(2);
-               // }
-                //if (CheckCell.PlayerNumber == Type) { Score++; }
-                //else { Score = 0; }
+               Cell CheckCell = board.GetCell(cell.X, i);
+               if (Score == 3)
+               {
+                 CheckCell.PlaceYellow(2);
+                 return;
+               }
+              if (CheckCell.PlayerNumber == Type) { Score++; }
+              else { Score = 0; }
 
-//                if (CheckCell.PlayerNumber == Type && Score == 1 && i != 0)
-  //              {
-    //                cell1 = board.GetCell(cell.X-1, i);
-      //          }
+               
 
-        //    }
+           }
 
             //Check vertical possibilities
             Score = 0;
@@ -370,13 +366,16 @@ namespace Final_ConnectFour
         private void AI(RoundButton roundButton, Cell cell)
         {
             //this "random" choice simply lets the game really start. 
-            Cell celll = board.GetLowestCell(roundButton);
-            if (piecesPlaced==1)
+            Cell celll = board.GetCell(cell.X, cell.Y-1);
+            if (piecesPlaced == 1)
             {
                 celll.PlaceYellow(2);
+                //now we are cooking.
             }
-            //now we are cooking.
-            AIsearch(cell);
+            else
+            {
+                AIsearch(cell);
+            }
 
         }
 
