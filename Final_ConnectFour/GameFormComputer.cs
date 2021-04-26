@@ -366,9 +366,17 @@ namespace Final_ConnectFour
         private void AI(RoundButton roundButton, Cell cell)
         {
             //this "random" choice simply lets the game really start. 
-            Cell celll = board.GetCell(cell.X, cell.Y-1);
+            Cell celll ;
             if (piecesPlaced == 1)
             {
+                if(cell.Y == 0)
+                {
+                    celll = board.GetCell(cell.X, cell.Y + 1);
+                }
+                else
+                {
+                    celll = board.GetCell(cell.X, cell.Y - 1);
+                }
                 celll.PlaceYellow(2);
                 //now we are cooking.
             }
