@@ -127,7 +127,7 @@ namespace Final_ConnectFour
         }
 
         //Game Win Function (Kyle Bartram)
-        private void CheckForWin(Cell cell, Board board)
+        private void CheckForWin(Cell cell)
         {
             GameWon = false;
 
@@ -230,6 +230,107 @@ namespace Final_ConnectFour
                 }
 
             }
+        }
+
+        private bool CheckForWin(Cell cell, Board board)
+        {
+            GameWon = false;
+
+            int BoardRows = board.GetRows();
+            int BoardColumns = board.GetColumns();
+
+            int Type = cell.PlayerNumber;
+
+            //My logic for checking horizontal and vertical is it would be easier to check the whole row rather than to code a function 
+            // that checks only possibilities based off of the piece placed
+
+            //Check horizontal possibilities
+            int Score = 0;
+            for (int i = 0; i < BoardColumns; i++)
+            {
+                Cell CheckCell = board.GetCell(cell.X, i);
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
+
+                if (Score == 4) { GameWon = true; }
+            }
+
+            //Check vertical possibilities
+            Score = 0;
+            for (int i = 0; i < BoardRows; i++)
+            {
+                Cell CheckCell = board.GetCell(i, cell.Y);
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
+
+                if (Score == 4) { GameWon = true; }
+            }
+
+            //Check Diagonal Possibilities Right Up
+            for (int j = 5; j > 0; j--)
+            {
+                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the right
+                {
+                    Cell TempCell = board.GetCell(j, row);
+                    if (TempCell.PlayerNumber == Type) { Score = 1; }
+                    else { Score = 0; }
+                    int Over = 1;
+                    for (int i = j; i > 0; i--)
+                    {
+                        if (row + Over >= BoardColumns || i - 1 < 0) { break; }
+                        Cell CheckCell = board.GetCell(i - 1, row + Over);
+                        if (CheckCell.PlayerNumber == Type) { Score++; }
+                        else { Score = 0; }
+
+                        if (Score == 4) { GameWon = true; }
+
+                        Over++;
+                    }
+                }
+            }
+
+            //Check Diagonal Possibilities Left Up
+            for (int j = 5; j > 0; j--)
+            {
+                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the left
+                {
+                    Cell TempCell = board.GetCell(j, row);
+                    if (TempCell.PlayerNumber == Type) { Score = 1; }
+                    else { Score = 0; }
+                    int Over = 1;
+                    for (int i = j; i > 0; i--)
+                    {
+                        if (row - Over < 0 || i - 1 < 0) { break; }
+                        Cell CheckCell = board.GetCell(i - 1, row - Over);
+                        if (CheckCell.PlayerNumber == Type) { Score++; }
+                        else { Score = 0; }
+
+                        if (Score == 4) { GameWon = true; }
+
+                        Over++;
+                    }
+                }
+            }
+
+            // Check for game draw
+            if (piecesPlaced == board.GetRows() * board.GetColumns()) GameDraw = true;
+
+            if (GameWon || GameDraw)
+            {
+                if (GameWon)
+                {
+                    // return true probably
+                    return true;
+                }
+                else if (GameDraw)
+                {
+                    // idk how to handle this rn BUT i'm confident you will figure it out LMAO
+                }
+
+            }
+
+            return false;
+
         }
 
         private void roundButton_MouseEnter(object sender, EventArgs e)
@@ -403,7 +504,7 @@ namespace Final_ConnectFour
                 // Would you guys rather have the PlayerTurn assignments in the if or in a ternary like this?
                 piecesPlaced++;
                 
-                CheckForWin(cell, board);
+                CheckForWin(cell);
                 AI(roundButton, cell);
                 if (!GameWon) roundButton_MouseEnter(sender, e);
             }
