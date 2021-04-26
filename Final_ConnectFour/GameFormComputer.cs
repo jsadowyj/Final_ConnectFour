@@ -255,6 +255,131 @@ namespace Final_ConnectFour
             }
         }
 
+        private void AIsearch(Cell cell)
+        {
+            int BoardRows = board.GetRows();
+            int BoardColumns = board.GetColumns();
+
+            Cell cell1 = board.GetCell(1,1);
+            //just a dummy cell.
+            int Type = 1;
+
+           
+
+            
+            int Score = 0;
+            for (int i = 0; i < BoardColumns; i++)
+            {
+
+                Cell CheckCell = board.GetCell(cell.X, i);
+                if (Score == 3)
+                {
+                    cell1 = board.GetLowestCell(CheckCell);
+                    if (cell1 == CheckCell)
+                    {
+                        CheckCell.PlaceYellow(2);
+                        return;
+                    }
+                }
+                else
+                {
+                    if (CheckCell.PlayerNumber == Type) { Score++; }
+                    else { Score = 0; }
+
+                }
+
+            }
+
+            Score = 0;
+           // for (int i = 5; i > 0; i--)
+            //{
+
+              //  Cell CheckCell = board.GetCell(cell.X, i);
+                //if (Score == 3)
+                //{
+                  //  cell1.PlaceYellow(2);
+               // }
+                //if (CheckCell.PlayerNumber == Type) { Score++; }
+                //else { Score = 0; }
+
+//                if (CheckCell.PlayerNumber == Type && Score == 1 && i != 0)
+  //              {
+    //                cell1 = board.GetCell(cell.X-1, i);
+      //          }
+
+        //    }
+
+            //Check vertical possibilities
+            Score = 0;
+            for (int i = 0; i < BoardRows; i++)
+            {
+                Cell CheckCell = board.GetCell(i, cell.Y);
+                if (CheckCell.PlayerNumber == Type) { Score++; }
+                else { Score = 0; }
+
+                if (Score == 4) { GameWon = true; }
+            }
+
+            //Check Diagonal Possibilities Right Up
+            for (int j = 5; j > 0; j--)
+            {
+                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the right
+                {
+                    Cell TempCell = board.GetCell(j, row);
+                    if (TempCell.PlayerNumber == Type) { Score = 1; }
+                    else { Score = 0; }
+                    int Over = 1;
+                    for (int i = j; i > 0; i--)
+                    {
+                        if (row + Over >= BoardColumns || i - 1 < 0) { break; }
+                        Cell CheckCell = board.GetCell(i - 1, row + Over);
+                        if (CheckCell.PlayerNumber == Type) { Score++; }
+                        else { Score = 0; }
+
+                        if (Score == 4) { GameWon = true; }
+
+                        Over++;
+                    }
+                }
+            }
+
+            //Check Diagonal Possibilities Left Up
+            for (int j = 5; j > 0; j--)
+            {
+                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the left
+                {
+                    Cell TempCell = board.GetCell(j, row);
+                    if (TempCell.PlayerNumber == Type) { Score = 1; }
+                    else { Score = 0; }
+                    int Over = 1;
+                    for (int i = j; i > 0; i--)
+                    {
+                        if (row - Over < 0 || i - 1 < 0) { break; }
+                        Cell CheckCell = board.GetCell(i - 1, row - Over);
+                        if (CheckCell.PlayerNumber == Type) { Score++; }
+                        else { Score = 0; }
+
+                        if (Score == 4) { GameWon = true; }
+
+                        Over++;
+                    }
+                }
+            }
+        }
+
+        private void AI(RoundButton roundButton, Cell cell)
+        {
+            //this "random" choice simply lets the game really start. 
+            Cell celll = board.GetLowestCell(roundButton);
+            if (piecesPlaced==1)
+            {
+                celll.PlaceYellow(2);
+            }
+            //now we are cooking.
+            AIsearch(cell);
+
+        }
+
         private void roundButton_Click(object sender, EventArgs e)
         {
             RoundButton roundButton = sender as RoundButton;
@@ -268,15 +393,11 @@ namespace Final_ConnectFour
                     cell.PlaceRed(PlayerTurn);
                     //PlayerTurn = 2;
                 }
-                else if (PlayerTurn == 2)
-                {
-                    cell.PlaceYellow(PlayerTurn);
-                    //PlayerTurn = 1;
-                }
                 // Would you guys rather have the PlayerTurn assignments in the if or in a ternary like this?
-                PlayerTurn = PlayerTurn == 1 ? 2 : 1;
                 piecesPlaced++;
+                
                 CheckForWin(cell);
+                AI(roundButton, cell);
                 if (!GameWon) roundButton_MouseEnter(sender, e);
             }
         }
