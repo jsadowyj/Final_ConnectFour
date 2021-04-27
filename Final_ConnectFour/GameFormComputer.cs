@@ -234,7 +234,7 @@ namespace Final_ConnectFour
 
         private bool CheckForWin(Cell cell, Board board)
         {
-            GameWon = false;
+            bool isWin = false;
 
             int BoardRows = board.GetRows();
             int BoardColumns = board.GetColumns();
@@ -252,7 +252,7 @@ namespace Final_ConnectFour
                 if (CheckCell.PlayerNumber == Type) { Score++; }
                 else { Score = 0; }
 
-                if (Score == 4) { GameWon = true; }
+                if (Score == 4) { isWin = true; }
             }
 
             //Check vertical possibilities
@@ -263,7 +263,7 @@ namespace Final_ConnectFour
                 if (CheckCell.PlayerNumber == Type) { Score++; }
                 else { Score = 0; }
 
-                if (Score == 4) { GameWon = true; }
+                if (Score == 4) { isWin = true; }
             }
 
             //Check Diagonal Possibilities Right Up
@@ -282,7 +282,7 @@ namespace Final_ConnectFour
                         if (CheckCell.PlayerNumber == Type) { Score++; }
                         else { Score = 0; }
 
-                        if (Score == 4) { GameWon = true; }
+                        if (Score == 4) { isWin = true; }
 
                         Over++;
                     }
@@ -292,7 +292,7 @@ namespace Final_ConnectFour
             //Check Diagonal Possibilities Left Up
             for (int j = 5; j > 0; j--)
             {
-                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the left
+                for (int row = 0; row < board.GetColumns(); row++) //Checks all possibilities going up and to the left
                 {
                     Cell TempCell = board.GetCell(j, row);
                     if (TempCell.PlayerNumber == Type) { Score = 1; }
@@ -305,31 +305,14 @@ namespace Final_ConnectFour
                         if (CheckCell.PlayerNumber == Type) { Score++; }
                         else { Score = 0; }
 
-                        if (Score == 4) { GameWon = true; }
+                        if (Score == 4) { isWin = true; }
 
                         Over++;
                     }
                 }
             }
 
-            // Check for game draw
-            if (piecesPlaced == board.GetRows() * board.GetColumns()) GameDraw = true;
-
-            if (GameWon || GameDraw)
-            {
-                if (GameWon)
-                {
-                    // return true probably
-                    return true;
-                }
-                else if (GameDraw)
-                {
-                    // idk how to handle this rn BUT i'm confident you will figure it out LMAO
-                }
-
-            }
-
-            return false;
+            return isWin;
 
         }
 
@@ -356,135 +339,158 @@ namespace Final_ConnectFour
             }
         }
 
-        private void AIsearch(Cell cell)
+        private void AI()
         {
-            int BoardRows = board.GetRows();
-            int BoardColumns = board.GetColumns();
-
-            Cell cell1 = board.GetCell(1,1);
-            //just a dummy cell.
-            int Type = 1;
-
-           
-
-            
-            int Score = 0;
-            for (int i = 0; i < BoardColumns; i++)
+            // Try to take win
+            for (int col = 0; col < board.GetColumns(); col++)
             {
+                Cell startCell = board.GetCell(0, col);
+                Cell cell = board.GetLowestCell(startCell);
 
-                Cell CheckCell = board.GetCell(cell.X, i);
-                if (Score == 3)
+                Board virtualBoard = board.GenerateVirtualBoard();
+                Cell virtualCell = virtualBoard.GetCell(cell.X, cell.Y);
+                virtualCell.PlaceYellow(2);
+                //virtualBoard.Print();
+                bool isWin = CheckForWin(virtualCell, virtualBoard);
+                if (isWin)
                 {
-                    
-                        CheckCell.PlaceYellow(2);
+                    cell = board.GetCell(virtualCell.X, virtualCell.Y);
+                    cell.PlaceYellow(2);
+                    CheckForWin(cell);
+                    return;
+                }
+
+            }
+            // Try to block win
+            for (int col = 0; col < board.GetColumns(); col++)
+            {
+                Cell startCell = board.GetCell(0, col);
+                Cell cell = board.GetLowestCell(startCell);
+
+                Board virtualBoard = board.GenerateVirtualBoard();
+                Cell virtualCell = virtualBoard.GetCell(cell.X, cell.Y);
+                virtualCell.PlaceRed(1);
+                //virtualBoard.Print();
+                bool isWin = CheckForWin(virtualCell, virtualBoard);
+                if (isWin)
+                {
+                    cell = board.GetCell(virtualCell.X, virtualCell.Y);
+                    cell.PlaceYellow(2);
+                    CheckForWin(cell);
+                    return;
+                }
+
+            }
+
+            // Try to place chip on top of already placed chip
+            for (int col = 0; col < board.GetColumns(); col++)
+            {
+                Cell startCell = board.GetCell(0, col);
+                Cell cell = board.GetLowestCell(startCell);
+
+                if (cell.X < 5) cell = board.GetCell(cell.X + 1, col);
+                
+                if (cell.PlayerNumber == 2)
+                {
+                    if (board.IsPlaceable(cell.X - 1, cell.Y))
+                    {
+                        board.GetCell(cell.X - 1, cell.Y).PlaceYellow(2);
                         return;
-                  
-                }
-                else
-                {
-                    if (CheckCell.PlayerNumber == Type) { Score++; }
-                    else { Score = 0; }
-
-                }
-
-            }
-
-           Score = 0;
-           for (int i = 6; i > 0; i--)
-           {
-
-               Cell CheckCell = board.GetCell(cell.X, i);
-               if (Score == 3)
-               {
-                 CheckCell.PlaceYellow(2);
-                 return;
-               }
-              if (CheckCell.PlayerNumber == Type) { Score++; }
-              else { Score = 0; }
-
-               
-
-           }
-
-            //Check vertical possibilities
-            Score = 0;
-            for (int i = 0; i < BoardRows; i++)
-            {
-                Cell CheckCell = board.GetCell(i, cell.Y);
-                if (CheckCell.PlayerNumber == Type) { Score++; }
-                else { Score = 0; }
-
-                if (Score == 4) { GameWon = true; }
-            }
-
-            //Check Diagonal Possibilities Right Up
-            for (int j = 5; j > 0; j--)
-            {
-                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the right
-                {
-                    Cell TempCell = board.GetCell(j, row);
-                    if (TempCell.PlayerNumber == Type) { Score = 1; }
-                    else { Score = 0; }
-                    int Over = 1;
-                    for (int i = j; i > 0; i--)
-                    {
-                        if (row + Over >= BoardColumns || i - 1 < 0) { break; }
-                        Cell CheckCell = board.GetCell(i - 1, row + Over);
-                        if (CheckCell.PlayerNumber == Type) { Score++; }
-                        else { Score = 0; }
-
-                        if (Score == 4) { GameWon = true; }
-
-                        Over++;
                     }
+                    continue;
                 }
+
             }
 
-            //Check Diagonal Possibilities Left Up
-            for (int j = 5; j > 0; j--)
+
+            // Try to place chip to the left or right of a placed chip
+
+            //===================================================================================
+            // Jake's non-working code
+            //===================================================================================
+            //for (int col = 0; col < board.GetColumns(); col++)
+            //{
+            //    Cell startCell = board.GetCell(0, col);
+            //    Cell cell = board.GetLowestCell(startCell);
+            //    // Can either be -1, 0, or 1
+            //    int direction = 0;
+
+            //    int leftPoints = 0;
+            //    int rightPoints = 0;
+
+            //    // Loop through left side
+            //    for (int i = cell.Y; board.IsValidCoordinate(cell.X, i); i--)
+            //    {
+            //        //Console.WriteLine("Left Side");
+            //        //Console.WriteLine(board.GetCell(cell.X, i).ToString());
+            //        if (board.GetCell(cell.X, i).PlayerNumber == 2) leftPoints++;
+            //        if (board.GetCell(cell.X, i).PlayerNumber == 1) leftPoints = 0;
+            //    }
+            //    // Loop through right side
+            //    for (int i = cell.Y; board.IsValidCoordinate(cell.X, i); i++)
+            //    {
+            //        //Console.WriteLine("Right Side");
+            //        //Console.WriteLine(board.GetCell(cell.X, i).ToString());
+            //        if (board.GetCell(cell.X, i).PlayerNumber == 2) rightPoints++;
+            //        if (board.GetCell(cell.X, i).PlayerNumber == 1) rightPoints = 0;
+            //    }
+            //    if (leftPoints > rightPoints) direction = -1;
+            //    if (rightPoints > leftPoints) direction = 1;
+            //    if (leftPoints == rightPoints)
+            //    {
+            //        Random rand = new Random();
+            //        int randNum = rand.Next(0, 2);
+            //        direction = randNum == 0 ? -1 : 1;
+            //    }
+
+            //    if (direction == -1)
+            //    {
+            //        // Check if piece to the left is a valid coordinate
+            //        if (board.IsPlaceable(cell.X, cell.Y - 1))
+            //        {
+            //            board.GetCell(cell.X, cell.Y - 1).PlaceYellow(2);
+            //            return;
+            //        }
+            //        else if (board.IsPlaceable(cell.X, cell.Y + 1))
+            //        {
+            //            board.GetCell(cell.X, cell.Y + 1).PlaceYellow(2);
+            //            return;
+            //        }
+            //    }
+
+            //    if (direction == 1)
+            //    {
+            //        // Check if piece to the left is a valid coordinate
+            //        if (board.IsPlaceable(cell.X, cell.Y + 1))
+            //        {
+            //            board.GetCell(cell.X, cell.Y + 1).PlaceYellow(2);
+            //            return;
+            //        }
+            //        else if (board.IsPlaceable(cell.X, cell.Y - 1))
+            //        {
+            //            board.GetCell(cell.X, cell.Y - 1).PlaceYellow(2);
+            //            return;
+            //        }
+
+            //    }
+            //}
+            //===================================================================================
+
+            // Worst Case Scenerio pick a random number...
+            // But this should rarely happen
+            MessageBox.Show("Random!");
+            // I'm gonna put a pop up so we know for sure when the random happens
+            Random random = new Random();
+            int randomNum = random.Next(0, board.GetColumns());
+            Cell randomCell = board.GetCell(0, randomNum);
+            randomCell = board.GetLowestCell(randomCell);
+            while(!board.IsPlaceable(randomCell.X, randomCell.Y))
             {
-                for (int row = 0; row < board.GetColumns(); row++)                                 //Checks all possibilities going up and to the left
-                {
-                    Cell TempCell = board.GetCell(j, row);
-                    if (TempCell.PlayerNumber == Type) { Score = 1; }
-                    else { Score = 0; }
-                    int Over = 1;
-                    for (int i = j; i > 0; i--)
-                    {
-                        if (row - Over < 0 || i - 1 < 0) { break; }
-                        Cell CheckCell = board.GetCell(i - 1, row - Over);
-                        if (CheckCell.PlayerNumber == Type) { Score++; }
-                        else { Score = 0; }
-
-                        if (Score == 4) { GameWon = true; }
-
-                        Over++;
-                    }
-                }
+                randomNum = random.Next(0, board.GetColumns());
+                randomCell = board.GetCell(0, randomNum);
+                randomCell = board.GetLowestCell(randomCell);
             }
-        }
-
-        private void AI(RoundButton roundButton, Cell cell)
-        {
-            //this "random" choice simply lets the game really start. 
-            Cell celll ;
-            if (piecesPlaced == 1)
-            {
-                if(cell.Y == 0)
-                {
-                    celll = board.GetCell(cell.X, cell.Y + 1);
-                }
-                else
-                {
-                    celll = board.GetCell(cell.X, cell.Y - 1);
-                }
-                celll.PlaceYellow(2);
-                //now we are cooking.
-            }
-            else
-            {
-                AIsearch(cell);
-            }
+            randomCell.PlaceYellow(2);
 
         }
 
@@ -499,14 +505,15 @@ namespace Final_ConnectFour
                 if (PlayerTurn == 1)
                 {
                     cell.PlaceRed(PlayerTurn);
-                    //PlayerTurn = 2;
                 }
                 // Would you guys rather have the PlayerTurn assignments in the if or in a ternary like this?
                 piecesPlaced++;
                 
                 CheckForWin(cell);
-                AI(roundButton, cell);
-                if (!GameWon) roundButton_MouseEnter(sender, e);
+                PlayerTurn = 2;
+                if (!GameWon && !GameDraw) AI();
+                PlayerTurn = 1;
+                if (!GameWon && !GameDraw) roundButton_MouseEnter(sender, e);
             }
         }
 
