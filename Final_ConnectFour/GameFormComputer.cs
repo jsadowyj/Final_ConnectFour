@@ -378,84 +378,9 @@ namespace Final_ConnectFour
 
             }
 
-
-            // Try to place chip to the left or right of a placed chip
-
-            //===================================================================================
-            // Jake's non-working code
-            //===================================================================================
-            //for (int col = 0; col < board.GetColumns(); col++)
-            //{
-            //    Cell startCell = board.GetCell(0, col);
-            //    Cell cell = board.GetLowestCell(startCell);
-            //    // Can either be -1, 0, or 1
-            //    int direction = 0;
-
-            //    int leftPoints = 0;
-            //    int rightPoints = 0;
-
-            //    // Loop through left side
-            //    for (int i = cell.Y; board.IsValidCoordinate(cell.X, i); i--)
-            //    {
-            //        //Console.WriteLine("Left Side");
-            //        //Console.WriteLine(board.GetCell(cell.X, i).ToString());
-            //        if (board.GetCell(cell.X, i).PlayerNumber == 2) leftPoints++;
-            //        if (board.GetCell(cell.X, i).PlayerNumber == 1) leftPoints = 0;
-            //    }
-            //    // Loop through right side
-            //    for (int i = cell.Y; board.IsValidCoordinate(cell.X, i); i++)
-            //    {
-            //        //Console.WriteLine("Right Side");
-            //        //Console.WriteLine(board.GetCell(cell.X, i).ToString());
-            //        if (board.GetCell(cell.X, i).PlayerNumber == 2) rightPoints++;
-            //        if (board.GetCell(cell.X, i).PlayerNumber == 1) rightPoints = 0;
-            //    }
-            //    if (leftPoints > rightPoints) direction = -1;
-            //    if (rightPoints > leftPoints) direction = 1;
-            //    if (leftPoints == rightPoints)
-            //    {
-            //        Random rand = new Random();
-            //        int randNum = rand.Next(0, 2);
-            //        direction = randNum == 0 ? -1 : 1;
-            //    }
-
-            //    if (direction == -1)
-            //    {
-            //        // Check if piece to the left is a valid coordinate
-            //        if (board.IsPlaceable(cell.X, cell.Y - 1))
-            //        {
-            //            board.GetCell(cell.X, cell.Y - 1).PlaceYellow(2);
-            //            return;
-            //        }
-            //        else if (board.IsPlaceable(cell.X, cell.Y + 1))
-            //        {
-            //            board.GetCell(cell.X, cell.Y + 1).PlaceYellow(2);
-            //            return;
-            //        }
-            //    }
-
-            //    if (direction == 1)
-            //    {
-            //        // Check if piece to the left is a valid coordinate
-            //        if (board.IsPlaceable(cell.X, cell.Y + 1))
-            //        {
-            //            board.GetCell(cell.X, cell.Y + 1).PlaceYellow(2);
-            //            return;
-            //        }
-            //        else if (board.IsPlaceable(cell.X, cell.Y - 1))
-            //        {
-            //            board.GetCell(cell.X, cell.Y - 1).PlaceYellow(2);
-            //            return;
-            //        }
-
-            //    }
-            //}
-            //===================================================================================
-
             // Worst Case Scenerio pick a random number...
-            // But this should rarely happen
             Console.WriteLine("Random Placement");
-            // I'm gonna put a pop up so we know for sure when the random happens
+            // I'm log so we know for sure when the random happens
             Random random = new Random();
             int randomNum = random.Next(0, board.GetColumns());
             Cell randomCell = board.GetCell(0, randomNum);
