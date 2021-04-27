@@ -315,30 +315,6 @@ namespace Final_ConnectFour
             return isWin;
 
         }
-
-        private void roundButton_MouseEnter(object sender, EventArgs e)
-        {
-            RoundButton roundButton = sender as RoundButton;
-
-            Cell cell = board.GetLowestCell(roundButton);
-
-            if (!cell.IsPlaced)
-            {
-                cell.Button.ChangeHoverColor(PlayerTurn == 1 ? "Red" : "Yellow");
-            }
-        }
-        private void roundButton_MouseLeave(object sender, EventArgs e)
-        {
-            RoundButton roundButton = sender as RoundButton;
-
-            Cell cell = board.GetLowestCell(roundButton);
-
-            if (!cell.IsPlaced)
-            {
-                cell.Button.ChangeHoverColor("Default");
-            }
-        }
-
         private void AI()
         {
             // Try to take win
@@ -389,7 +365,7 @@ namespace Final_ConnectFour
                 Cell cell = board.GetLowestCell(startCell);
 
                 if (cell.X < 5) cell = board.GetCell(cell.X + 1, col);
-                
+
                 if (cell.PlayerNumber == 2)
                 {
                     if (board.IsPlaceable(cell.X - 1, cell.Y))
@@ -478,13 +454,13 @@ namespace Final_ConnectFour
 
             // Worst Case Scenerio pick a random number...
             // But this should rarely happen
-            MessageBox.Show("Random!");
+            Console.WriteLine("Random Placement");
             // I'm gonna put a pop up so we know for sure when the random happens
             Random random = new Random();
             int randomNum = random.Next(0, board.GetColumns());
             Cell randomCell = board.GetCell(0, randomNum);
             randomCell = board.GetLowestCell(randomCell);
-            while(!board.IsPlaceable(randomCell.X, randomCell.Y))
+            while (!board.IsPlaceable(randomCell.X, randomCell.Y))
             {
                 randomNum = random.Next(0, board.GetColumns());
                 randomCell = board.GetCell(0, randomNum);
@@ -492,6 +468,29 @@ namespace Final_ConnectFour
             }
             randomCell.PlaceYellow(2);
 
+        }
+
+        private void roundButton_MouseEnter(object sender, EventArgs e)
+        {
+            RoundButton roundButton = sender as RoundButton;
+
+            Cell cell = board.GetLowestCell(roundButton);
+
+            if (!cell.IsPlaced)
+            {
+                cell.Button.ChangeHoverColor(PlayerTurn == 1 ? "Red" : "Yellow");
+            }
+        }
+        private void roundButton_MouseLeave(object sender, EventArgs e)
+        {
+            RoundButton roundButton = sender as RoundButton;
+
+            Cell cell = board.GetLowestCell(roundButton);
+
+            if (!cell.IsPlaced)
+            {
+                cell.Button.ChangeHoverColor("Default");
+            }
         }
 
         private void roundButton_Click(object sender, EventArgs e)
