@@ -17,6 +17,7 @@ namespace Final_ConnectFour
         // for the Player vs Computer
         private dynamic parent;
         private bool shouldExit = true;
+        private int playerNumber;
         public GameWonForm(dynamic parent)
         {
             InitializeComponent();
@@ -29,11 +30,13 @@ namespace Final_ConnectFour
         {
             InitializeComponent();
             this.parent = parent;
+            this.playerNumber = playerNumber;
+        }
+
+        private void GameWonForm_Load(object sender, EventArgs e)
+        {
             switch (playerNumber)
             {
-                case 0:
-                    lbl_header.Text = "Computer Wins!";
-                    break;
                 case 1:
                     lbl_header.Text = "Red Wins!";
                     break;
@@ -43,6 +46,12 @@ namespace Final_ConnectFour
                 default:
                     break;
             }
+            Stats stats = new Stats();
+            stats.Populate();
+
+            lbl_computerWins.Text += stats.ComputerWins;
+            lbl_playerWins.Text += stats.PlayerWins;
+            lbl_draws.Text += stats.Draws;
         }
 
         private void GameWonForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -77,5 +86,7 @@ namespace Final_ConnectFour
             }
 
         }
+
+
     }
 }

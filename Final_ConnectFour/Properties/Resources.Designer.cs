@@ -91,6 +91,15 @@ namespace Final_ConnectFour.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {&quot;ComputerWins&quot;:16,&quot;PlayerWins&quot;:2,&quot;Draws&quot;:0}.
+        /// </summary>
+        public static string stats {
+            get {
+                return ResourceManager.GetString("stats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap yellow_piece {

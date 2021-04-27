@@ -214,8 +214,11 @@ namespace Final_ConnectFour
             {
                 DisableGame();
 
+                Stats stats = new Stats();
+                stats.Populate();
                 if (GameWon)
                 {
+                    stats.AddWin(Type);
                     GameWonForm gameWonForm = new GameWonForm(this, Type);
                     gameWonForm.StartPosition = FormStartPosition.CenterParent;
                     this.Hide();
@@ -223,12 +226,12 @@ namespace Final_ConnectFour
                 } 
                 else if (GameDraw)
                 {
+                    stats.AddDraw();
                     GameWonForm gameWonForm = new GameWonForm(this);
                     gameWonForm.StartPosition = FormStartPosition.CenterParent;
                     this.Hide();
                     gameWonForm.ShowDialog();
                 }
-
             }
         }
 
@@ -332,6 +335,7 @@ namespace Final_ConnectFour
                 {
                     cell = board.GetCell(virtualCell.X, virtualCell.Y);
                     cell.PlaceYellow(2);
+                    piecesPlaced++;
                     CheckForWin(cell);
                     return;
                 }
@@ -352,6 +356,8 @@ namespace Final_ConnectFour
                 {
                     cell = board.GetCell(virtualCell.X, virtualCell.Y);
                     cell.PlaceYellow(2);
+                    piecesPlaced++;
+                    // The rest of the check for wins are basically just checking if there is a draw
                     CheckForWin(cell);
                     return;
                 }
@@ -371,6 +377,9 @@ namespace Final_ConnectFour
                     if (board.IsPlaceable(cell.X - 1, cell.Y))
                     {
                         board.GetCell(cell.X - 1, cell.Y).PlaceYellow(2);
+                        piecesPlaced++;
+                        // check for draw
+                        CheckForWin(board.GetCell(cell.X - 1, cell.Y));
                         return;
                     }
                     continue;
@@ -392,6 +401,9 @@ namespace Final_ConnectFour
                 randomCell = board.GetLowestCell(randomCell);
             }
             randomCell.PlaceYellow(2);
+            piecesPlaced++;
+            //check for draw
+            CheckForWin(randomCell);
 
         }
 
@@ -429,10 +441,9 @@ namespace Final_ConnectFour
                 if (PlayerTurn == 1)
                 {
                     cell.PlaceRed(PlayerTurn);
+                    piecesPlaced++;
                 }
                 // Would you guys rather have the PlayerTurn assignments in the if or in a ternary like this?
-                piecesPlaced++;
-                
                 CheckForWin(cell);
                 PlayerTurn = 2;
                 if (!GameWon && !GameDraw) AI();

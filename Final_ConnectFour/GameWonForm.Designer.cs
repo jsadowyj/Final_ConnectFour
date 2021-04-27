@@ -110,9 +110,9 @@ namespace Final_ConnectFour
             this.lbl_playerWins.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbl_playerWins.Location = new System.Drawing.Point(4, 256);
             this.lbl_playerWins.Name = "lbl_playerWins";
-            this.lbl_playerWins.Size = new System.Drawing.Size(119, 26);
+            this.lbl_playerWins.Size = new System.Drawing.Size(124, 26);
             this.lbl_playerWins.TabIndex = 13;
-            this.lbl_playerWins.Text = "Player Wins:";
+            this.lbl_playerWins.Text = "Player Wins: ";
             // 
             // lbl_computerWins
             // 
@@ -121,9 +121,9 @@ namespace Final_ConnectFour
             this.lbl_computerWins.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbl_computerWins.Location = new System.Drawing.Point(4, 293);
             this.lbl_computerWins.Name = "lbl_computerWins";
-            this.lbl_computerWins.Size = new System.Drawing.Size(151, 26);
+            this.lbl_computerWins.Size = new System.Drawing.Size(156, 26);
             this.lbl_computerWins.TabIndex = 13;
-            this.lbl_computerWins.Text = "Computer Wins:";
+            this.lbl_computerWins.Text = "Computer Wins: ";
             // 
             // lbl_draws
             // 
@@ -132,9 +132,9 @@ namespace Final_ConnectFour
             this.lbl_draws.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lbl_draws.Location = new System.Drawing.Point(6, 331);
             this.lbl_draws.Name = "lbl_draws";
-            this.lbl_draws.Size = new System.Drawing.Size(71, 26);
+            this.lbl_draws.Size = new System.Drawing.Size(76, 26);
             this.lbl_draws.TabIndex = 13;
-            this.lbl_draws.Text = "Draws:";
+            this.lbl_draws.Text = "Draws: ";
             // 
             // GameWonForm
             // 
@@ -155,6 +155,7 @@ namespace Final_ConnectFour
             this.Name = "GameWonForm";
             this.Text = "Winner!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameWonForm_FormClosing);
+            this.Load += new System.EventHandler(this.GameWonForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
