@@ -44,10 +44,9 @@ namespace Final_ConnectFour
             // 
             this.dsn_lbl_1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.dsn_lbl_1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dsn_lbl_1.Location = new System.Drawing.Point(-2, -1);
-            this.dsn_lbl_1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dsn_lbl_1.Location = new System.Drawing.Point(-3, -1);
             this.dsn_lbl_1.Name = "dsn_lbl_1";
-            this.dsn_lbl_1.Size = new System.Drawing.Size(270, 63);
+            this.dsn_lbl_1.Size = new System.Drawing.Size(360, 78);
             this.dsn_lbl_1.TabIndex = 5;
             // 
             // lbl_header
@@ -55,9 +54,10 @@ namespace Final_ConnectFour
             this.lbl_header.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.lbl_header.Font = new System.Drawing.Font("Candara", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_header.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lbl_header.Location = new System.Drawing.Point(-2, 9);
+            this.lbl_header.Location = new System.Drawing.Point(-3, 11);
+            this.lbl_header.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_header.Name = "lbl_header";
-            this.lbl_header.Size = new System.Drawing.Size(270, 46);
+            this.lbl_header.Size = new System.Drawing.Size(360, 57);
             this.lbl_header.TabIndex = 7;
             this.lbl_header.Text = "{Color} Wins!";
             this.lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,10 +66,9 @@ namespace Final_ConnectFour
             // 
             this.dsn_lbl_6.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.dsn_lbl_6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dsn_lbl_6.Location = new System.Drawing.Point(9, 74);
-            this.dsn_lbl_6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dsn_lbl_6.Location = new System.Drawing.Point(12, 91);
             this.dsn_lbl_6.Name = "dsn_lbl_6";
-            this.dsn_lbl_6.Size = new System.Drawing.Size(245, 168);
+            this.dsn_lbl_6.Size = new System.Drawing.Size(327, 207);
             this.dsn_lbl_6.TabIndex = 10;
             // 
             // btn_replay
@@ -79,9 +78,11 @@ namespace Final_ConnectFour
             this.btn_replay.FlatAppearance.BorderSize = 3;
             this.btn_replay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_replay.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_replay.Location = new System.Drawing.Point(19, 82);
+            this.btn_replay.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_replay.Location = new System.Drawing.Point(25, 101);
+            this.btn_replay.Margin = new System.Windows.Forms.Padding(4);
             this.btn_replay.Name = "btn_replay";
-            this.btn_replay.Size = new System.Drawing.Size(228, 72);
+            this.btn_replay.Size = new System.Drawing.Size(304, 89);
             this.btn_replay.TabIndex = 11;
             this.btn_replay.Text = "Review Game";
             this.btn_replay.UseVisualStyleBackColor = false;
@@ -94,9 +95,11 @@ namespace Final_ConnectFour
             this.btn_playAgain.FlatAppearance.BorderSize = 3;
             this.btn_playAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_playAgain.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_playAgain.Location = new System.Drawing.Point(19, 160);
+            this.btn_playAgain.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btn_playAgain.Location = new System.Drawing.Point(25, 197);
+            this.btn_playAgain.Margin = new System.Windows.Forms.Padding(4);
             this.btn_playAgain.Name = "btn_playAgain";
-            this.btn_playAgain.Size = new System.Drawing.Size(228, 72);
+            this.btn_playAgain.Size = new System.Drawing.Size(304, 89);
             this.btn_playAgain.TabIndex = 11;
             this.btn_playAgain.Text = "Play Again";
             this.btn_playAgain.UseVisualStyleBackColor = false;
@@ -108,9 +111,10 @@ namespace Final_ConnectFour
             this.lbl_playerWins.BackColor = System.Drawing.Color.Transparent;
             this.lbl_playerWins.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_playerWins.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_playerWins.Location = new System.Drawing.Point(4, 256);
+            this.lbl_playerWins.Location = new System.Drawing.Point(5, 315);
+            this.lbl_playerWins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_playerWins.Name = "lbl_playerWins";
-            this.lbl_playerWins.Size = new System.Drawing.Size(124, 26);
+            this.lbl_playerWins.Size = new System.Drawing.Size(155, 33);
             this.lbl_playerWins.TabIndex = 13;
             this.lbl_playerWins.Text = "Player Wins: ";
             // 
@@ -119,9 +123,10 @@ namespace Final_ConnectFour
             this.lbl_computerWins.AutoSize = true;
             this.lbl_computerWins.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_computerWins.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_computerWins.Location = new System.Drawing.Point(4, 293);
+            this.lbl_computerWins.Location = new System.Drawing.Point(5, 361);
+            this.lbl_computerWins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_computerWins.Name = "lbl_computerWins";
-            this.lbl_computerWins.Size = new System.Drawing.Size(156, 26);
+            this.lbl_computerWins.Size = new System.Drawing.Size(198, 33);
             this.lbl_computerWins.TabIndex = 13;
             this.lbl_computerWins.Text = "Computer Wins: ";
             // 
@@ -130,18 +135,19 @@ namespace Final_ConnectFour
             this.lbl_draws.AutoSize = true;
             this.lbl_draws.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_draws.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_draws.Location = new System.Drawing.Point(6, 331);
+            this.lbl_draws.Location = new System.Drawing.Point(8, 407);
+            this.lbl_draws.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_draws.Name = "lbl_draws";
-            this.lbl_draws.Size = new System.Drawing.Size(76, 26);
+            this.lbl_draws.Size = new System.Drawing.Size(96, 33);
             this.lbl_draws.TabIndex = 13;
             this.lbl_draws.Text = "Draws: ";
             // 
             // GameWonForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(263, 371);
+            this.ClientSize = new System.Drawing.Size(351, 457);
             this.Controls.Add(this.lbl_draws);
             this.Controls.Add(this.lbl_computerWins);
             this.Controls.Add(this.lbl_playerWins);
@@ -150,8 +156,10 @@ namespace Final_ConnectFour
             this.Controls.Add(this.dsn_lbl_6);
             this.Controls.Add(this.lbl_header);
             this.Controls.Add(this.dsn_lbl_1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "GameWonForm";
             this.Text = "Winner!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameWonForm_FormClosing);
